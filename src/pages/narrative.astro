@@ -1,27 +1,420 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const valueSignals = [
+  {
+    title: "P&L Impact",
+    text: "Design leadership tied to measurable business outcomes—revenue growth, cost reduction, and operational efficiency.",
+  },
+  {
+    title: "Organizational Alignment",
+    text: "Connecting executive vision, product strategy, design execution, and technical realities across teams.",
+  },
+  {
+    title: "Speed to Market",
+    text: "Building structure, clarity, and reusable systems that reduce friction and accelerate delivery.",
+  },
+  {
+    title: "Global Scale",
+    text: "Experience leading distributed organizations and enterprise initiatives across regions, functions, and complexity levels.",
+  },
+];
+
+const operatingModel = [
+  {
+    title: "See clearly",
+    text: "Identify the real problem beneath noise, assumptions, and fragmented signals.",
+  },
+  {
+    title: "Structure complexity",
+    text: "Turn ambiguity into usable frames, priorities, and decision paths that teams can act on.",
+  },
+  {
+    title: "Align the system",
+    text: "Bring leadership, product, design, engineering, and data into shared understanding and coordinated execution.",
+  },
+  {
+    title: "Drive execution",
+    text: "Move from direction to shipped outcomes with rigor, accountability, and sustainable momentum.",
+  },
+];
+
+const principles = [
+  "Clarity over activity",
+  "Systems over surfaces",
+  "Outcomes over artifacts",
+  "Alignment over scale",
+  "Simplicity under constraint",
+  "Signal over noise",
+];
+
+const leverageAreas = [
+  {
+    area: "Leadership",
+    text: "Framing decisions, priorities, and tradeoffs in language that connects strategy to execution.",
+  },
+  {
+    area: "Product",
+    text: "Clarifying opportunity space, shaping roadmaps, and structuring decisions around outcomes.",
+  },
+  {
+    area: "Engineering",
+    text: "Creating shared understanding so intent, feasibility, and execution remain aligned.",
+  },
+  {
+    area: "Teams",
+    text: "Establishing clarity, quality, operating rhythm, and standards that scale across the organization.",
+  },
+];
 ---
 
-<MainLayout title="Professional Narrative — Jorge Obando">
-  <h1>Professional Narrative</h1>
+<MainLayout title="How I Operate | Jorge Obando">
+  <section class="narrative-page">
+    <section class="hero">
+      <p class="eyebrow">How I Operate</p>
+      <h1>Design that translates complexity into business outcomes.</h1>
+      <p class="lead">
+        I operate at the intersection of strategy, systems, and execution—turning complexity into clear decisions that move business metrics, reduce risk, and scale organizations.
+      </p>
+    </section>
 
-  <p style="font-size: 22px; margin-top: 16px;">
-    My work has evolved from product design execution to leading complex systems, platform strategy, and AI-native experiences.
-  </p>
+    <section class="stats-grid" aria-label="Key experience signals">
+      <article class="stat-card">
+        <div class="stat-value">25+</div>
+        <div class="stat-label">Years of leadership</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-value">50M+</div>
+        <div class="stat-label">Users impacted</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-value">$2M+</div>
+        <div class="stat-label">ARR generated</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-value">40%</div>
+        <div class="stat-label">Cost reduction</div>
+      </article>
+    </section>
 
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
+    <section class="content-section intro-section">
+      <div class="section-heading">
+        <p class="section-kicker">Executive signal</p>
+        <h2>Beyond process</h2>
+      </div>
+      <div class="section-copy">
+        <p>
+          Most organizations don’t fail because they lack process. They fail because complexity is misaligned. They struggle
+          because complexity is misaligned—across strategy, teams, systems, priorities,
+          and decisions.
+        </p>
+        <p>
+          My role is not to apply a design process in isolation. It is to make complexity
+          visible, structured, and actionable so executive intent can translate into
+          outcomes that hold under real-world execution.
+        </p>
+      </div>
+    </section>
 
-  <section style="margin-top: 48px;">
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Executive value</p>
+        <h2>What I help organizations achieve</h2>
+      </div>
+      <div class="cards-grid four-up">
+        {valueSignals.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Strategic point of view</p>
+        <h2>Design as a strategic capability</h2>
+      </div>
+      <div class="two-column-text">
+        <p>
+          Design creates the most value when it operates as an organizational capability—not a downstream function. In complex environments, it becomes the discipline
+          that connects user reality, business direction, technical feasibility, and
+          operational execution.
+        </p>
+        <p>
+          That is especially true with AI. I treat AI as infrastructure, not spectacle:
+          every implementation should have governance, evidence criteria, clear decision
+          boundaries, and measurable impact that leaders can explain with confidence.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Operating model</p>
+        <h2>How I turn complexity into aligned execution</h2>
+      </div>
+      <div class="cards-grid two-up">
+        {operatingModel.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Decision system</p>
+        <h2>Principles that guide my decisions</h2>
+      </div>
+      <div class="principles-grid">
+        {principles.map((principle) => (
+          <div class="principle-item">{principle}</div>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Cross-functional leverage</p>
+        <h2>Where I create leverage</h2>
+      </div>
+      <div class="cards-grid two-up">
+        {leverageAreas.map((item) => (
+          <article class="info-card">
+            <h3>{item.area}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section practice-section">
+      <div class="section-heading">
+        <p class="section-kicker">In practice</p>
+        <h2>What this looks like in real organizations</h2>
+      </div>
+      <div class="section-copy">
+        <p>
+          I typically work in environments where systems are fragmented, priorities are
+          unclear, and complexity is increasing—often accelerated by scale, enterprise
+          constraints, organizational growth, or emerging AI capabilities.
+        </p>
+        <p>
+          My role is to create structure, align stakeholders, reduce ambiguity, and move
+          teams toward decisions that can sustain execution—not just presentations,
+          intentions, or isolated design outputs.
+        </p>
+      </div>
+    </section>
+<section class="content-section">
+  <div class="section-heading">
+    <p class="section-kicker">Closing perspective</p>
+    <h2>This is how I operate</h2>
+  </div>
+  <div class="section-copy">
     <p>
-      Over time, I have moved beyond designing individual features and interfaces to shaping broader product systems. My focus is on aligning user needs, business objectives, and technical realities within complex environments.
+      This is not a process I apply mechanically. It is how I think, how I make decisions,
+      and how I help organizations move from ambiguity to execution.
     </p>
-
-    <p style="margin-top: 24px;">
-      I work across enterprise platforms, service ecosystems, and emerging AI-native products where clarity, structure, and strategic thinking are essential.
+    <p>
+      The work itself—products, platforms, and systems—is where this operating model
+      becomes visible.
     </p>
-
-    <p style="margin-top: 24px;">
-      This perspective allows me to contribute not only to product design execution, but also to product direction, system architecture, and long-term platform evolution.
-    </p>
+  </div>
+</section>
   </section>
 </MainLayout>
+
+<style>
+  .narrative-page {
+    padding: 2.5rem 0 5.5rem;
+  }
+
+  .hero {
+    max-width: 760px;
+    margin-bottom: 3.5rem;
+  }
+
+  /* 🔴 REFINED LABELS (less loud, more editorial) */
+  .eyebrow,
+  .section-kicker {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a; /* softer red */
+  }
+
+  /* 🔥 ALIGN HEADING SCALE WITH HOME/ABOUT */
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 4.2vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin: 1.25rem 0 0;
+    max-width: 720px;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 0 4.5rem;
+  }
+
+  .stat-card,
+  .info-card,
+  .principle-item {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .stat-card {
+    padding: 1.3rem 1.3rem 1.2rem;
+  }
+
+  .stat-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .stat-label {
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  /* 🔥 BETTER SECTION RHYTHM */
+  .content-section {
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .section-heading {
+    max-width: 700px;
+    margin-bottom: 1.75rem;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(1.85rem, 2.3vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .section-copy,
+  .two-column-text {
+    max-width: 860px;
+  }
+
+  .section-copy p,
+  .two-column-text p,
+  .info-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #555;
+  }
+
+  .section-copy p + p,
+  .two-column-text p + p {
+    margin-top: 1rem;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.four-up {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .cards-grid.two-up,
+  .two-column-text {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+    gap: 1rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+  }
+
+  .principle-item {
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .practice-section {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 960px) {
+    .stats-grid,
+    .cards-grid.four-up,
+    .principles-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
+    .narrative-page {
+      padding: 1.5rem 0 4.5rem;
+    }
+
+    .hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .stats-grid,
+    .cards-grid.four-up,
+    .cards-grid.two-up,
+    .two-column-text,
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .content-section {
+      padding-top: 2.25rem;
+      margin-top: 2.25rem;
+    }
+  }
+</style>

@@ -1,36 +1,345 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const roles = [
+  {
+    title: "Director of Product Design",
+    company: "SAAMA Technologies",
+    meta: "Ewing, NJ • 2022 – 2025",
+    bullets: [
+      "Led design for AI-powered enterprise platforms in clinical research, improving decision workflows and operational efficiency.",
+      "Established scalable design systems and governance models, increasing delivery consistency and reducing implementation variability.",
+      "Aligned product, engineering, and executive stakeholders to drive platform strategy and measurable business outcomes.",
+    ],
+  },
+  {
+    title: "Global Head of Product Design",
+    company: "AB InBev / Z-Tech",
+    meta: "New York, NY • 2019 – 2022",
+    bullets: [
+      "Led global product design across fintech and marketplace ecosystems serving millions of users across LATAM.",
+      "Drove platform simplification and system unification, improving adoption and reducing friction across user journeys.",
+      "Built and scaled distributed design teams, establishing operating models across regions and functions.",
+    ],
+  },
+  {
+    title: "UX Design Consultant",
+    company: "American Express",
+    meta: "New York, NY • 2017 – 2019",
+    bullets: [
+      "Led UX for enterprise servicing platforms, improving usability, task efficiency, and customer experience quality.",
+      "Translated research insights into actionable design decisions within Agile delivery environments.",
+      "Improved alignment between design and engineering through structured specifications and delivery workflows.",
+    ],
+  },
+  {
+    title: "Senior UX Consultant",
+    company: "Medidata",
+    meta: "New York, NY • 2016 – 2017",
+    bullets: [
+      "Defined UX strategy for next-generation clinical research platforms, aligning complex workflows with user needs.",
+      "Led cross-functional workshops and research synthesis to drive product direction and clarity.",
+      "Improved execution readiness through structured design artifacts and system-level thinking.",
+    ],
+  },
+];
+
+const principles = [
+  "Clarity over activity",
+  "Systems over surfaces",
+  "Outcomes over artifacts",
+  "Alignment over scale",
+  "Simplicity under constraint",
+  "Signal over noise",
+];
 ---
 
-<MainLayout title="Resume — Jorge Obando">
-  <h1>Resume</h1>
+<MainLayout title="Resume | Jorge Obando">
+  <section class="resume-page">
+    <section class="hero">
+      <p class="eyebrow">Resume</p>
+      <h1>Jorge R. Obando</h1>
+      <p class="title">
+        Director of Product Design — Enterprise Platforms, AI, Systems
+      </p>
+      <p class="lead">
+        I design and govern systems that turn complexity into measurable business outcomes.
+      </p>
+    </section>
 
-  <section style="margin-top: 40px;">
-    <h2>Experience</h2>
+    <section class="contact">
+      <p>Ewing, New Jersey • jorgerobando@hotmail.com • 203-727-8979</p>
+      <p>LinkedIn • English / Spanish / Portuguese</p>
+    </section>
 
-    <div style="margin-top: 24px;">
-      <h3>Product Design Leader</h3>
-      <p><strong>Confidential / Enterprise Platforms</strong></p>
-      <p>Led design strategy across complex systems, platform ecosystems, and transformation initiatives.</p>
-    </div>
+    <section class="content-section">
+      <h2>Executive Summary</h2>
+      <p>
+        Director of Product Design with 25+ years of experience leading enterprise platforms,
+        AI integration, and global design organizations. I operate at the intersection of
+        strategy, systems, and execution—aligning product, engineering, and leadership to
+        deliver scalable, outcome-driven platforms across regulated and complex environments.
+      </p>
+    </section>
 
-    <div style="margin-top: 24px;">
-      <h3>Senior Product Designer</h3>
-      <p><strong>Multiple Organizations</strong></p>
-      <p>Delivered end-to-end design for enterprise, fintech, and platform-based products.</p>
-    </div>
-  </section>
+    <section class="content-section">
+      <h2>Operating Scope</h2>
+      <div class="cards-grid two-up">
+        <div class="info-card">
+          <h3>Operating Level</h3>
+          <p>Director-level leadership across enterprise platforms and cross-functional teams.</p>
+        </div>
+        <div class="info-card">
+          <h3>Organizational Scope</h3>
+          <p>Leadership of global teams (8–25), influencing distributed organizations across regions.</p>
+        </div>
+        <div class="info-card">
+          <h3>Business Impact</h3>
+          <p>40% cost reduction, 60% faster time-to-market, 300% adoption growth across platforms.</p>
+        </div>
+        <div class="info-card">
+          <h3>Systems & Governance</h3>
+          <p>Design systems, AI governance, and scalable operating models across organizations.</p>
+        </div>
+      </div>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Core Capabilities</h2>
-    <p>
-      Product Strategy, UX Systems, Design Leadership, AI Product Design,
-      Platform Architecture, Enterprise UX, Operational Design
-    </p>
-  </section>
+    <section class="content-section">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        {roles.map((role) => (
+          <article class="role">
+            <h3>{role.title}</h3>
+            <p class="meta">{role.company} • {role.meta}</p>
+            <ul>
+              {role.bullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Education</h2>
-    <p>Details available upon request</p>
+    <section class="content-section">
+      <h2>Early Career Highlights</h2>
+      <div class="early-grid">
+        <div>
+          <p><strong>Senior UX Consultant</strong><br />Wolters Kluwer</p>
+          <p><strong>Senior UX Consultant</strong><br />ACA Compliance Group</p>
+          <p><strong>UX Designer Consultant</strong><br />Audible (ACX)</p>
+          <p><strong>Information Architect Consultant</strong><br />Razorfish</p>
+          <p><strong>Senior UX Architect Consultant</strong><br />Prudential Financial</p>
+          <p><strong>Senior UX / IA Consultant</strong><br />DirecTV Latin America</p>
+          <p><strong>Global UCD Lead</strong><br />Boehringer Ingelheim</p>
+          <p><strong>Senior Communications & Technology Advisor / Regional Coordinator</strong><br />oneworld.net (UNDP Project)</p>
+        </div>
+
+        <div>
+          <p><strong>Senior UX Consultant</strong><br />Merrill Lynch / Bank of America</p>
+          <p><strong>UX Designer Consultant</strong><br />IDT Corporation</p>
+          <p><strong>Interaction Designer Consultant</strong><br />Healthwise</p>
+          <p><strong>Information Architect Consultant</strong><br />Dow Jones / WSJ</p>
+          <p><strong>VP, Interaction Design</strong><br />FTI Consulting</p>
+          <p><strong>Senior IA Consultant</strong><br />IBM</p>
+          <p><strong>Information Systems Director</strong><br />United Methodist Church</p>
+          <p><strong>Information Architect / Interactive Media Producer</strong><br />Kipany Productions</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Principles</h2>
+      <div class="principles-grid">
+        {principles.map((principle) => (
+          <div class="principle-item">{principle}</div>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Education</h2>
+      <p>M.A. Corporate Communication — College of New Rochelle</p>
+      <p>B.A. Mass Communication & Psychology — Saint John Fisher College</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Core Capabilities</h2>
+      <p>
+        Product Strategy • UX/UI Design • AI/ML Interaction • Design Systems • Enterprise Platforms •
+        Digital Transformation • UX Research • Data-Driven Design • Agile / SAFe
+      </p>
+    </section>
   </section>
 </MainLayout>
+
+<style>
+  .resume-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .title {
+    margin: 0 0 0.6rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .lead {
+    margin: 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .contact {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .contact p {
+    margin: 0.2rem 0;
+  }
+
+  .content-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 0.9rem;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.two-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .info-card {
+    border: 1px solid var(--divider);
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .info-card p {
+    margin: 0;
+  }
+
+  .experience-list .role {
+    margin-bottom: 2rem;
+  }
+
+  .experience-list .role:last-child {
+    margin-bottom: 0;
+  }
+
+  .role h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .meta {
+    margin: 0 0 0.8rem;
+    font-size: 0.92rem;
+    color: #666;
+  }
+
+  ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.45rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .early-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+  }
+
+  .early-grid p {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .early-grid strong {
+    font-weight: 600;
+    color: #111;
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .principle-item {
+    border: 1px solid var(--divider);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    background: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid.two-up,
+    .principles-grid,
+    .early-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .resume-page {
+      padding: 1.5rem 0 4rem;
+    }
+  }
+</style>

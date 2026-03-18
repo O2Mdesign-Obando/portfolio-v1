@@ -1,50 +1,296 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const featuredSeries = [
+  {
+    title: "Designing Through Change: From Pages to Platforms to Intelligence",
+    description:
+      "A three-part series on how product design evolves from static interfaces to systems, platforms, and intelligent experiences.",
+    href: "#",
+  },
+];
+
+const systemsAndPlatforms = [
+  {
+    title: "Building a Governed Product System",
+    description:
+      "Why durable digital products require governance, observability, and system-level decision frameworks.",
+    href: "#",
+  },
+  {
+    title: "Building a Portfolio Like a Product System",
+    description:
+      "Applying product systems thinking to professional visibility, structure, and long-term growth.",
+    href: "#",
+  },
+  {
+    title: "The Thinking Stack: From Ideas to a Living Knowledge Ecosystem",
+    description:
+      "A framework for turning fragmented expertise into a connected, evolving knowledge system.",
+    href: "#",
+  },
+];
+
+const aiAndInteraction = [
+  {
+    title: "The Most Frustrating Part of AI",
+    description:
+      "A user-centered view of where AI experiences break trust, create friction, and fall short in practice.",
+    href: "#",
+  },
+  {
+    title: "What Flash Taught Us About Trend Technology",
+    description:
+      "What earlier waves of digital enthusiasm can teach us about AI, product judgment, and long-term value.",
+    href: "#",
+  },
+  {
+    title: "From Interfaces to Intelligent Experiences",
+    description:
+      "How design changes when products begin to guide, adapt, and participate in decision-making.",
+    href: "#",
+  },
+];
+
+const businessAndStrategy = [
+  {
+    title: "Measuring What Matters: Tying Design Decisions to Business KPIs",
+    description:
+      "How to connect design choices to growth, efficiency, and measurable business outcomes.",
+    href: "#",
+  },
+  {
+    title: "Designing with Intent: Roadmapping and Prioritization in the Enterprise",
+    description:
+      "A practical perspective on strategic prioritization in large-scale product environments.",
+    href: "#",
+  },
+  {
+    title: "Designing for Growth: The Business Value of Multilingual Experiences",
+    description:
+      "Why language strategy is not just localization, but a real lever for reach, trust, and growth.",
+    href: "#",
+  },
+];
+
+const productPerspective = [
+  {
+    title: "What I Actually Want From Your Product",
+    description:
+      "A perspective on clarity, speed, respect, and what users really need from digital products.",
+    href: "#",
+  },
+  {
+    title: "Designing for the Crowd vs. Designing for the Core",
+    description:
+      "How product strategy changes when you design for the majority versus the highest-value user group.",
+    href: "#",
+  },
+];
 ---
 
-<MainLayout title="Thinking — Jorge Obando">
-  <h1>Thinking</h1>
-
-  <p style="font-size: 22px; margin-top: 16px;">
-    Writing on product design, systems thinking, platform strategy, and AI-native experiences.
-  </p>
-
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
-
-  <section style="margin-top: 48px;">
-
-    <article style="margin-bottom: 48px;">
-      <h2>
-        <a href="#" style="text-decoration: none; color: inherit;">
-          Designing for Complex Systems
-        </a>
-      </h2>
-      <p>
-        How product design evolves when moving from single products to interconnected systems.
+<MainLayout title="Thinking | Jorge Obando">
+  <section class="thinking-page">
+    <section class="hero">
+      <p class="eyebrow">Thinking</p>
+      <h1>Systems, strategy, and the evolution of product design.</h1>
+      <p class="lead">
+        Perspectives on designing complex systems, integrating AI, and aligning product
+        decisions with business outcomes.
       </p>
-    </article>
+    </section>
 
-    <article style="margin-bottom: 48px;">
-      <h2>
-        <a href="#" style="text-decoration: none; color: inherit;">
-          From Features to Platforms
-        </a>
-      </h2>
-      <p>
-        Rethinking product strategy when building scalable platforms instead of isolated features.
-      </p>
-    </article>
+    <section class="content-section">
+      <h2>Featured Series</h2>
+      <div class="cards-grid one-up">
+        {featuredSeries.map((item) => (
+          <a href={item.href} class="thought-card featured-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="link">Read Series →</span>
+          </a>
+        ))}
+      </div>
+    </section>
 
-    <article style="margin-bottom: 48px;">
-      <h2>
-        <a href="#" style="text-decoration: none; color: inherit;">
-          Designing AI-Native Experiences
-        </a>
-      </h2>
-      <p>
-        Moving beyond interfaces to systems that learn, adapt, and guide user behavior.
-      </p>
-    </article>
+    <section class="content-section">
+      <h2>Systems & Platforms</h2>
+      <div class="cards-grid three-up">
+        {systemsAndPlatforms.map((item) => (
+          <a href={item.href} class="thought-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="link">Read Article →</span>
+          </a>
+        ))}
+      </div>
+    </section>
 
+    <section class="content-section">
+      <h2>AI & Interaction Evolution</h2>
+      <div class="cards-grid three-up">
+        {aiAndInteraction.map((item) => (
+          <a href={item.href} class="thought-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="link">Read Article →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Business & Strategy</h2>
+      <div class="cards-grid three-up">
+        {businessAndStrategy.map((item) => (
+          <a href={item.href} class="thought-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="link">Read Article →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Product Perspective</h2>
+      <div class="cards-grid two-up">
+        {productPerspective.map((item) => (
+          <a href={item.href} class="thought-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="link">Read Article →</span>
+          </a>
+        ))}
+      </div>
+    </section>
   </section>
 </MainLayout>
+
+<style>
+  .thinking-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 780px;
+    margin-bottom: 3.5rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 4vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    max-width: 760px;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid.two-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .thought-card {
+    display: block;
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .thought-card:hover {
+    transform: translateY(-2px);
+    border-color: #ccc;
+  }
+
+  .featured-card {
+    padding: 1.65rem;
+  }
+
+  .thought-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .thought-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.75;
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #a33a3a;
+  }
+
+  @media (max-width: 960px) {
+    .cards-grid.three-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .thinking-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .cards-grid.two-up,
+    .cards-grid.three-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+  }
+</style>

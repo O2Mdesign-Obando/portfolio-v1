@@ -1,46 +1,341 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Industry", value: "Life Sciences / Enterprise SaaS" },
+  { label: "Role", value: "Director of Product Design" },
+  { label: "Scope", value: "8 designers, 3 researchers, cross-functional leadership" },
+  { label: "Key Outcomes", value: "50% faster design-to-development, 65% faster task completion" },
+];
+
+const decisions = [
+  {
+    title: "Explainability-first AI interactions",
+    text: "We treated AI support as a decision aid, not a black box—designing for clarity, trust, and human oversight in high-stakes workflows.",
+  },
+  {
+    title: "Task-centric workflow structure",
+    text: "We shifted the experience away from data-heavy screens toward workflow-oriented paths that matched how clinical teams actually work.",
+  },
+  {
+    title: "Component-first platform design",
+    text: "We established reusable interaction and UI patterns that reduced fragmentation and improved scalability across product lines.",
+  },
+];
+
+const outcomes = [
+  "Reduced design-to-development cycle time by 50% through clearer systems, governance, and execution workflows.",
+  "Improved user task completion time by 65% through simplified workflows and better information hierarchy.",
+  "Supported enterprise-scale platform consistency with a design system adopted across product lines.",
+  "Enabled AI-informed decision-making while maintaining transparency, usability, and regulatory confidence.",
+];
 ---
 
-<MainLayout title="AI-Powered Life Sciences Platform">
-  <h1>AI-Powered Life Sciences Platform</h1>
+<MainLayout title="AI-Powered Life Sciences Platform | Jorge Obando">
+  <section class="case-study-page">
+    <section class="hero">
+      <p class="eyebrow">SAAMA</p>
+      <h1>AI-Powered Life Sciences Platform</h1>
+      <p class="lead">
+        Reframing fragmented clinical research workflows into a scalable enterprise platform
+        that improved efficiency, reduced complexity, and enabled more confident,
+        AI-informed decision-making.
+      </p>
+    </section>
 
-  <p style="font-size: 22px; margin-top: 16px;">
-    Shaping a complex platform experience that helped scientific teams work more
-    efficiently with intelligent tools and structured workflows.
-  </p>
+    <section class="snapshot-grid" aria-label="Case study snapshot">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
 
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
+    <section class="content-section">
+      <h2>The situation</h2>
+      <p>
+        Clinical trial professionals were operating across fragmented legacy systems,
+        overloaded interfaces, and disconnected workflows. Critical information was spread
+        across multiple tools, making routine work slower, more error-prone, and harder to
+        manage at scale.
+      </p>
+      <p>
+        As organizations pushed for faster, more intelligent clinical operations, the need
+        was not simply for a better interface. The need was for a unified platform that
+        could reduce cognitive load, support regulatory rigor, and make AI useful in
+        everyday decision-making.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Context</h2>
-    <p>
-      Scientific and research teams often worked across fragmented systems, manual
-      workflows, and highly specialized tools that created friction in daily work.
-    </p>
-  </section>
+    <section class="content-section">
+      <h2>The challenge</h2>
+      <p>
+        The core challenge was to simplify highly complex, data-dense workflows without
+        oversimplifying the reality of clinical research operations. Teams needed faster
+        access to information, clearer prioritization, and confidence in the system’s
+        recommendations—especially where compliance and auditability mattered.
+      </p>
+      <p>
+        This meant solving for more than usability. It required aligning workflow design,
+        information architecture, governance, and platform consistency across an enterprise
+        environment with multiple user roles, evolving requirements, and AI-enabled
+        capabilities.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Challenge</h2>
-    <p>
-      How might we create a more unified, intuitive platform experience that supports
-      complex scientific tasks without adding operational overhead?
-    </p>
-  </section>
+    <section class="content-section">
+      <h2>My role</h2>
+      <p>
+        As Director of Product Design, I operated across product strategy, design
+        leadership, and systems governance. I guided designers and researchers, aligned
+        cross-functional stakeholders, and helped shape a platform direction that could
+        scale across modules, teams, and operational contexts.
+      </p>
+      <p>
+        My role was not limited to interface decisions. It included creating the structure,
+        standards, and decision frameworks needed to reduce fragmentation and improve how
+        product, design, and engineering worked together.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Approach</h2>
-    <p>
-      Applied product thinking, workflow analysis, and platform design principles to
-      clarify user needs, structure information, and improve task efficiency.
-    </p>
-  </section>
+    <section class="content-section">
+      <h2>How I operated</h2>
+      <div class="cards-grid two-up">
+        <article class="info-card">
+          <h3>Clarified the real problem</h3>
+          <p>
+            We reframed the work from “modernizing screens” to improving end-to-end
+            clinical workflows, reducing cognitive load, and making decision support more usable.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Structured the system</h3>
+          <p>
+            We used information hierarchy, modular patterns, and design system thinking to
+            create a more coherent platform foundation across products and roles.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Aligned stakeholders</h3>
+          <p>
+            I worked across product, engineering, and design to build shared understanding
+            around priorities, constraints, and platform direction.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Drove execution</h3>
+          <p>
+            We translated strategy into production-ready systems, reducing rework and
+            increasing consistency from design through implementation.
+          </p>
+        </article>
+      </div>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Outcome</h2>
-    <p>
-      Helped shape a more coherent platform direction that supported usability,
-      scale, and better alignment between user workflows and product architecture.
-    </p>
+    <section class="content-section">
+      <h2>Key decisions</h2>
+      <div class="cards-grid one-up">
+        {decisions.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <p>
+        This work demonstrates the kind of design leadership I bring to complex
+        environments: not just improving interfaces, but building the systems,
+        governance, and cross-functional clarity needed to make platforms more usable,
+        scalable, and strategically valuable.
+      </p>
+    </section>
+
+    <section class="content-section next-step">
+      <h2>Next case study</h2>
+      <p>
+        Continue to <a href="/case-studies/smb-marketplace-fintech">SMB Marketplace & Fintech Ecosystem</a>.
+      </p>
+    </section>
   </section>
 </MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+    max-width: 760px;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.85;
+    max-width: 840px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.two-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0;
+    max-width: none;
+  }
+
+  .outcomes-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .next-step a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  @media (max-width: 960px) {
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .snapshot-grid,
+    .cards-grid.two-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+  }
+</style>

@@ -1,46 +1,285 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Industry", value: "Marketplace / Fintech" },
+  { label: "Role", value: "Global Head of Product Design" },
+  { label: "Scope", value: "8 designers, 3 researchers, global cross-functional teams" },
+  { label: "Key Outcomes", value: "2M+ SMBs, $1.2B GMV, new fintech revenue streams" },
+];
+
+const decisions = [
+  {
+    title: "Discovery-led marketplace design",
+    text: "We shifted from transaction-first flows to discovery-driven experiences, helping SMBs find products, compare options, and make better purchasing decisions.",
+  },
+  {
+    title: "Fintech as infrastructure, not feature",
+    text: "Payments, credit, and financial tools were embedded directly into workflows, enabling SMBs to operate more efficiently without switching systems.",
+  },
+  {
+    title: "Mobile-first for low-literacy environments",
+    text: "We designed for real-world usage conditions—ensuring accessibility, clarity, and usability for users with varying levels of digital familiarity.",
+  },
+  {
+    title: "Unified vendor and operations model",
+    text: "We created a single system that connected procurement, fulfillment, and financial visibility for both SMBs and suppliers.",
+  },
+];
+
+const outcomes = [
+  "Enabled a unified marketplace and fintech ecosystem serving 2M+ SMBs across Latin America.",
+  "Generated $1.2B+ in annual gross merchandise value through integrated platform capabilities.",
+  "Unlocked new revenue streams through embedded financial services (credit, payments).",
+  "Improved operational efficiency for SMBs by reducing fragmentation across tools and workflows.",
+  "Positioned AB InBev as a digital transformation leader in the SMB marketplace ecosystem.",
+];
 ---
 
-<MainLayout title="SMB Marketplace & Fintech Ecosystem">
-  <h1>SMB Marketplace & Fintech Ecosystem</h1>
+<MainLayout title="SMB Marketplace & Fintech Ecosystem | Jorge Obando">
+  <section class="case-study-page">
 
-  <p style="font-size: 22px; margin-top: 16px;">
-    Designing an integrated marketplace and financial services ecosystem for small
-    and medium-sized businesses in Latin America.
-  </p>
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">AB InBev / Z-Tech</p>
+      <h1>SMB Marketplace & Fintech Ecosystem</h1>
+      <p class="lead">
+        Transforming fragmented SMB operations into a unified marketplace and fintech
+        platform—unlocking new revenue streams, improving efficiency, and enabling
+        millions of businesses to scale.
+      </p>
+    </section>
 
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
+    <!-- SNAPSHOT -->
+    <section class="snapshot-grid">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Context</h2>
-    <p>
-      Small and medium-sized businesses across Latin America faced fragmented tools,
-      limited access to financial services, and inefficient procurement processes.
-    </p>
-  </section>
+    <!-- SITUATION -->
+    <section class="content-section">
+      <h2>The situation</h2>
+      <p>
+        Small and medium-sized businesses (SMBs) across Latin America operated in highly
+        fragmented environments. Procurement, payments, inventory, and vendor management
+        were handled through disconnected tools—often informal channels such as messaging
+        apps, phone calls, and manual processes.
+      </p>
+      <p>
+        This fragmentation limited growth, reduced efficiency, and prevented SMBs from
+        accessing financial services that could expand their operations.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Challenge</h2>
-    <p>
-      How might we create a unified platform that simplifies procurement, improves
-      operational visibility, and unlocks financial services for SMBs?
-    </p>
-  </section>
+    <!-- CHALLENGE -->
+    <section class="content-section">
+      <h2>The challenge</h2>
+      <p>
+        The challenge was to design a platform that could unify procurement, payments,
+        and financial services into a single system—while remaining usable for a highly
+        diverse user base with varying levels of digital literacy.
+      </p>
+      <p>
+        This required balancing marketplace dynamics, fintech capabilities, regional
+        complexity, and real-world operational constraints across multiple countries.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Approach</h2>
-    <p>
-      Led a mixed-methods research approach combining interviews, surveys, and market
-      analysis to deeply understand SMB workflows and constraints.
-    </p>
-  </section>
+    <!-- ROLE -->
+    <section class="content-section">
+      <h2>My role</h2>
+      <p>
+        As Global Head of Product Design, I led design strategy across a distributed,
+        cross-functional organization. I worked closely with product, engineering, and
+        business stakeholders to align platform direction and ensure the experience
+        supported both user needs and business objectives.
+      </p>
+      <p>
+        My focus was on shaping a system that could scale across markets while maintaining
+        clarity, usability, and operational consistency.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Outcome</h2>
-    <p>
-      Delivered a platform concept that improved efficiency, increased access to
-      financial tools, and created a scalable foundation for growth.
-    </p>
+    <!-- HOW I OPERATED -->
+    <section class="content-section">
+      <h2>How I operated</h2>
+      <div class="cards-grid two-up">
+
+        <article class="info-card">
+          <h3>Reframed the problem</h3>
+          <p>
+            We moved from improving isolated tools to designing a connected ecosystem
+            that integrated marketplace and financial services into a single platform.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Structured the platform</h3>
+          <p>
+            We defined core workflows and system architecture that could support
+            procurement, payments, and operations across multiple markets.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Aligned global teams</h3>
+          <p>
+            I worked across regions and functions to align priorities, ensure consistency,
+            and build a shared understanding of platform direction.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Enabled scalable execution</h3>
+          <p>
+            We established reusable patterns and systems that allowed faster rollout
+            across countries without redesigning from scratch.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DECISIONS -->
+    <section class="content-section">
+      <h2>Key decisions</h2>
+      <div class="cards-grid one-up">
+        {decisions.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <p>
+        This work demonstrates how design can operate at the level of business systems—
+        not just interfaces—connecting marketplace dynamics, financial services, and
+        operational workflows into a cohesive platform that creates real economic impact.
+      </p>
+    </section>
+
+    <!-- NEXT -->
+    <section class="content-section next-step">
+      <h2>Next case study</h2>
+      <p>
+        Continue to <a href="/case-studies/global-servicing-platform">Global Servicing Platform</a>.
+      </p>
+    </section>
+
   </section>
 </MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+    max-width: 760px;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin-top: 0.4rem;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.two-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .outcomes-card {
+    padding: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .snapshot-grid,
+    .cards-grid.two-up {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

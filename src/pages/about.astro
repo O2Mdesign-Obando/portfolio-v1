@@ -2,23 +2,199 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="About — Jorge Obando">
-  <h1>About</h1>
+<MainLayout title="About | Jorge Obando">
+  <section class="about-hero">
+    <p class="eyebrow">About</p>
+    <h1>Building systems that turn complexity into measurable impact.</h1>
+    <p class="lead">
+      Director of Product Design with 25+ years of experience leading enterprise platforms,
+      AI integration, and global design organizations.
+    </p>
+    <p class="supporting">
+      I operate at the intersection of strategy, systems, and execution—aligning product,
+      engineering, data, and leadership to deliver scalable, outcome-driven experiences.
+    </p>
+  </section>
 
-  <p>
-    I am a product design leader focused on complex platforms, intelligent systems,
-    and AI-native experiences. My work sits at the intersection of design strategy,
-    systems thinking, operational clarity, and product execution.
-  </p>
+  <section class="about-main">
+    <div class="about-copy about-copy-wide">
+      <h2>Professional Narrative</h2>
+      <p>
+        As a Director of Product Design, I lead initiatives that transform complex business
+        challenges into scalable, AI-enhanced platforms. My work focuses on aligning strategic
+        intent with execution—ensuring that design decisions drive measurable outcomes.
+      </p>
+      <p>
+        Over the course of my career, I have worked across enterprise environments and
+        high-growth organizations, leading cross-functional teams and building systems that
+        operate at scale.
+      </p>
+      <p>
+        I integrate AI not as a feature, but as a lever for solving meaningful problems—through
+        predictive systems, intelligent workflows, and decision frameworks that balance
+        automation with human judgment.
+      </p>
+    </div>
+  </section>
 
-  <p>
-    Across my career, I have helped shape enterprise platforms, service ecosystems,
-    and transformation initiatives that improve usability, align stakeholders, and
-    create stronger business outcomes.
-  </p>
+  <section>
+    <p class="section-label">Philosophy</p>
+    <h2>What I Believe</h2>
 
-  <p>
-    This portfolio is a curated public surface of my work, thinking, and selected
-    case studies.
-  </p>
+    <div class="three-up-grid">
+      <div class="card">
+        <p>Strategic design decisions should drive measurable business outcomes.</p>
+      </div>
+
+      <div class="card">
+        <p>AI integration should solve real problems with transparency.</p>
+      </div>
+
+      <div class="card">
+        <p>Cross-functional alignment accelerates impact.</p>
+      </div>
+
+      <div class="card">
+        <p>Ethical and inclusive design builds trust at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Core Strengths</p>
+    <h2>What I Bring</h2>
+
+    <div class="three-up-grid">
+      <div class="card">
+        <h3>Research &amp; Insight</h3>
+        <p>Turning signals into actionable product direction.</p>
+      </div>
+
+      <div class="card">
+        <h3>Systems Design</h3>
+        <p>Building scalable platforms and workflows.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Experience</h3>
+        <p>Designing intelligent, data-driven systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Leadership</h3>
+        <p>Aligning teams and delivering at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="personal">
+    <p class="section-label">Beyond the Work</p>
+    <h2>Perspective</h2>
+
+    <div class="about-grid">
+      <div>
+        <p>
+          I was born in Costa Rica and grew up across multiple countries. This global perspective
+          shapes how I approach design—valuing context, balance, and diversity of thought.
+        </p>
+        <p>
+          My path into design began unexpectedly and evolved into a career spanning the full
+          spectrum of product design, from early web systems to AI-enhanced platforms.
+        </p>
+        <p>
+          Today, I live in New Jersey with my family. Their perspective grounds my work and
+          continues to shape how I think about impact and responsibility.
+        </p>
+      </div>
+
+      <div class="about-image-wrap">
+        <img src="/images/personal.jpg" alt="Jorge Obando with Ariana" class="about-image" />
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <h2>From Perspective to Practice</h2>
+    <p>
+      The work that follows reflects how these principles translate into real systems,
+      platforms, and measurable outcomes.
+    </p>
+    <a class="button button-primary" href="/case-studies">View Case Studies</a>
+  </section>
+
+  <style>
+    .about-hero {
+      margin-top: 48px;
+      max-width: 720px;
+    }
+
+    .about-main {
+      margin-top: 56px;
+    }
+
+    .about-copy-wide {
+      max-width: 760px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-image-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 420px;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid #dddddd;
+      display: block;
+    }
+
+    .three-up-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      padding: 20px;
+      border-radius: 16px;
+      background: #ffffff;
+    }
+
+    .personal {
+      margin-top: 80px;
+    }
+
+    .closing {
+      margin-top: 80px;
+      max-width: 760px;
+    }
+
+    @media (max-width: 720px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .three-up-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        max-width: 100%;
+        height: 280px;
+      }
+    }
+  </style>
 </MainLayout>

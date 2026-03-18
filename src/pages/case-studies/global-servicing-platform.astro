@@ -1,41 +1,280 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Industry", value: "Fintech / Enterprise Platform" },
+  { label: "Role", value: "UX Design Consultant" },
+  { label: "Scope", value: "Global platform, cross-market servicing workflows" },
+  { label: "Focus", value: "Usability, workflow clarity, system consistency" },
+];
+
+const decisions = [
+  {
+    title: "Workflow-first design",
+    text: "We prioritized end-to-end servicing workflows over isolated screens, ensuring users could complete tasks efficiently across the system.",
+  },
+  {
+    title: "Consistency through shared patterns",
+    text: "We introduced consistent interaction patterns and design standards to reduce cognitive load and improve usability across regions.",
+  },
+  {
+    title: "Localization with structural integrity",
+    text: "We balanced global consistency with local market needs, ensuring the platform could scale without fragmentation.",
+  },
+];
+
+const outcomes = [
+  "Improved usability and reduced friction across complex servicing workflows.",
+  "Increased consistency across platform experiences and interaction patterns.",
+  "Strengthened foundation for scalable product development across global markets.",
+  "Enabled clearer alignment between design, product, and engineering teams.",
+];
 ---
 
-<MainLayout title="Global Servicing Platform">
-  <h1>Global Servicing Platform</h1>
+<MainLayout title="Global Servicing Platform | Jorge Obando">
+  <section class="case-study-page">
 
-  <p style="font-size: 22px; margin-top: 16px;">
-    Improving a large-scale servicing platform through clearer workflows, stronger UX foundations, and more consistent product thinking.
-  </p>
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">American Express</p>
+      <h1>Global Servicing Platform</h1>
+      <p class="lead">
+        Improving a large-scale enterprise platform by simplifying workflows,
+        strengthening UX foundations, and creating a more consistent and scalable system.
+      </p>
+    </section>
 
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
+    <!-- SNAPSHOT -->
+    <section class="snapshot-grid">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Context</h2>
-    <p>
-      The platform supported complex servicing operations across multiple regions, but suffered from fragmented experiences, inconsistent patterns, and operational inefficiencies.
-    </p>
-  </section>
+    <!-- SITUATION -->
+    <section class="content-section">
+      <h2>The situation</h2>
+      <p>
+        The platform supported complex servicing operations across multiple regions,
+        but experiences were fragmented. Inconsistent interaction patterns and
+        disconnected workflows created inefficiencies and increased cognitive load
+        for users.
+      </p>
+      <p>
+        As the platform expanded globally, these inconsistencies made it harder to
+        maintain quality, scale effectively, and ensure a cohesive user experience.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Challenge</h2>
-    <p>
-      How might we improve usability and consistency across a large, distributed platform while supporting diverse operational workflows?
-    </p>
-  </section>
+    <!-- CHALLENGE -->
+    <section class="content-section">
+      <h2>The challenge</h2>
+      <p>
+        The challenge was to improve usability and consistency across a large,
+        distributed system while supporting diverse workflows across regions and
+        user types.
+      </p>
+      <p>
+        This required aligning design patterns, simplifying workflows, and creating
+        a stronger UX foundation that could scale without introducing additional
+        complexity.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Approach</h2>
-    <p>
-      Introduced stronger UX foundations, aligned patterns across the system, and improved workflows through clearer structure and design consistency.
-    </p>
-  </section>
+    <!-- ROLE -->
+    <section class="content-section">
+      <h2>My role</h2>
+      <p>
+        As a UX Design Consultant, I worked across product, engineering, and design
+        teams to improve the overall experience of the platform. I contributed to
+        both strategic direction and execution, helping define patterns, workflows,
+        and interaction models.
+      </p>
+      <p>
+        My focus was on reducing fragmentation and improving how the system worked
+        as a whole, rather than optimizing individual screens in isolation.
+      </p>
+    </section>
 
-  <section style="margin-top: 48px;">
-    <h2>Outcome</h2>
-    <p>
-      Improved usability, reduced friction across workflows, and created a more scalable foundation for continued platform evolution.
-    </p>
+    <!-- HOW I OPERATED -->
+    <section class="content-section">
+      <h2>How I operated</h2>
+      <div class="cards-grid two-up">
+
+        <article class="info-card">
+          <h3>Identified system-level issues</h3>
+          <p>
+            We analyzed workflows across the platform to identify inconsistencies,
+            redundancies, and friction points.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Established UX foundations</h3>
+          <p>
+            We introduced shared patterns and principles that improved consistency
+            and usability across the system.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Aligned teams</h3>
+          <p>
+            I worked with cross-functional teams to ensure design decisions were
+            understood, implemented, and consistent across products.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Improved execution quality</h3>
+          <p>
+            We strengthened the connection between design and engineering, reducing
+            ambiguity and improving delivery outcomes.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DECISIONS -->
+    <section class="content-section">
+      <h2>Key decisions</h2>
+      <div class="cards-grid one-up">
+        {decisions.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <p>
+        This work reinforced the importance of strong UX foundations in enterprise
+        systems. Improving consistency and workflow clarity at the system level
+        creates lasting impact—far beyond individual feature improvements.
+      </p>
+    </section>
+
+    <!-- NEXT -->
+    <section class="content-section next-step">
+      <h2>Next case study</h2>
+      <p>
+        Return to <a href="/case-studies">all case studies</a>.
+      </p>
+    </section>
+
   </section>
 </MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+    max-width: 760px;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin-top: 0.4rem;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.two-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .outcomes-card {
+    padding: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .snapshot-grid,
+    .cards-grid.two-up {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
