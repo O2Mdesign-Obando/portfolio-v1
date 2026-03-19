@@ -1,7 +1,11 @@
 ---
-import Header from "../components/Header.astro";
-
 const { title = "Jorge Obando" } = Astro.props;
+const pathname = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
 ---
 
 <html lang="en">
@@ -11,20 +15,36 @@ const { title = "Jorge Obando" } = Astro.props;
 
     <title>{title}</title>
 
-    <meta name="description" content="Jorge Obando — Product Design Leader specializing in intelligent systems, platform strategy, and AI-native experiences." />
+    <meta
+      name="description"
+      content="Jorge Obando — Product Design Leader specializing in intelligent systems, platform strategy, and AI-native experiences."
+    />
 
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Product Design Leader focused on systems, platforms, and AI-native experiences." />
+    <meta
+      property="og:description"
+      content="Product Design Leader focused on systems, platforms, and AI-native experiences."
+    />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
 
-    <style>
+    <style is:global>
       :root {
         --text-primary: #111111;
         --text-secondary: #555555;
         --background: #ffffff;
         --divider: #e5e5e5;
+        --accent: #a33a3a;
+        --surface-muted: #fafafa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -34,33 +54,222 @@ const { title = "Jorge Obando" } = Astro.props;
         color: var(--text-primary);
       }
 
+      a {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--divider);
+      }
+
+      .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0;
+        text-decoration: none;
+        color: #111;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+      }
+
+      .logo-accent {
+        color: var(--accent);
+      }
+
+      .header-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        min-width: 0;
+      }
+
+      .header-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0;
+        text-decoration: none;
+        color: #555;
+        font-size: 0.94rem;
+        line-height: 1.2;
+        transition: color 0.15s ease;
+        white-space: nowrap;
+      }
+
+      .header-link:hover {
+        color: #111;
+      }
+
+      .header-link.is-active {
+        color: #111;
+      }
+
+      .header-link.is-active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -0.35rem;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 999px;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.25rem;
+      }
+
+      .contact-link {
+        padding: 0.42rem 0.8rem;
+        border: 1px solid var(--divider);
+        border-radius: 999px;
+        background: #fff;
+      }
+
+      .contact-link:hover {
+        background: var(--surface-muted);
+      }
+
+      .contact-link.is-active {
+        border-color: rgba(163, 58, 58, 0.25);
+      }
+
       main {
         max-width: 900px;
         margin: 0 auto;
-        padding: 32px 24px 80px;
+        padding: 2rem 1.5rem 5rem;
       }
 
       h1 {
-        font-size: 48px;
-        line-height: 1.2;
-        margin: 0 0 24px;
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        margin: 0 0 1.5rem;
       }
 
       h2 {
-        margin: 0 0 12px;
+        margin: 0 0 0.75rem;
       }
 
       p {
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 1.125rem;
+        line-height: 1.75;
         color: var(--text-secondary);
+      }
+
+      @media (max-width: 900px) {
+        .header-inner {
+          grid-template-columns: 1fr;
+          align-items: start;
+          gap: 0.85rem;
+        }
+
+        .header-center,
+        .header-right {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .header-link.is-active::after {
+          bottom: -0.25rem;
+        }
+
+        main {
+          padding-top: 1.5rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .header-inner {
+          padding: 0.9rem 1rem;
+        }
+
+        .header-center {
+          gap: 1rem;
+        }
+
+        .header-right {
+          gap: 1rem;
+        }
+
+        main {
+          padding: 1.25rem 1rem 4rem;
+        }
+
+        p {
+          font-size: 1.02rem;
+          line-height: 1.7;
+        }
       }
     </style>
   </head>
 
   <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="/" class="logo" aria-label="Jorge R. Obando home">
+            <span>Jorge R<span class="logo-accent">.</span> Obando</span>
+          </a>
+        </div>
+
+        <nav class="header-center" aria-label="Primary">
+          <a href="/case-studies" class={`header-link ${isActive("/case-studies") ? "is-active" : ""}`}>
+            Case Studies
+          </a>
+          <a href="/thinking" class={`header-link ${isActive("/thinking") ? "is-active" : ""}`}>
+            Thinking
+          </a>
+          <a href="/narrative" class={`header-link ${isActive("/narrative") ? "is-active" : ""}`}>
+            Narrative
+          </a>
+          <a href="/about" class={`header-link ${isActive("/about") ? "is-active" : ""}`}>
+            About
+          </a>
+        </nav>
+
+        <div class="header-right">
+          <a href="/resume" class={`header-link ${isActive("/resume") ? "is-active" : ""}`}>
+            Resume
+          </a>
+          <a href="/contact" class={`header-link contact-link ${isActive("/contact") ? "is-active" : ""}`}>
+            Contact
+          </a>
+        </div>
+      </div>
+    </header>
+
     <main>
-      <Header />
       <slot />
     </main>
   </body>

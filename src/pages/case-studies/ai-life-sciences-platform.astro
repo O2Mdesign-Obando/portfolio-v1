@@ -11,11 +11,11 @@ const snapshot = [
 const decisions = [
   {
     title: "Explainability-first AI interactions",
-    text: "We treated AI support as a decision aid, not a black box—designing for clarity, trust, and human oversight in high-stakes workflows.",
+    text: "We treated AI as decision support, not a black box—designing for clarity, trust, and human oversight in high-stakes workflows.",
   },
   {
     title: "Task-centric workflow structure",
-    text: "We shifted the experience away from data-heavy screens toward workflow-oriented paths that matched how clinical teams actually work.",
+    text: "We moved the experience away from data-heavy screens toward workflow paths that matched how clinical teams actually operate.",
   },
   {
     title: "Component-first platform design",
@@ -24,23 +24,29 @@ const decisions = [
 ];
 
 const outcomes = [
-  "Reduced design-to-development cycle time by 50% through clearer systems, governance, and execution workflows.",
-  "Improved user task completion time by 65% through simplified workflows and better information hierarchy.",
-  "Supported enterprise-scale platform consistency with a design system adopted across product lines.",
-  "Enabled AI-informed decision-making while maintaining transparency, usability, and regulatory confidence.",
+  "Cut design-to-development cycle time by 50% by introducing clearer systems, governance, and execution workflows.",
+  "Improved user task completion time by 65% through simplified workflows and stronger information hierarchy.",
+  "Created a more consistent enterprise platform foundation through reusable design patterns adopted across product lines.",
+  "Enabled AI-informed decision-making with greater transparency, usability, and regulatory confidence.",
 ];
 ---
 
 <MainLayout title="AI-Powered Life Sciences Platform | Jorge Obando">
   <section class="case-study-page">
     <section class="hero">
-      <p class="eyebrow">SAAMA</p>
-      <h1>AI-Powered Life Sciences Platform</h1>
-      <p class="lead">
-        Reframing fragmented clinical research workflows into a scalable enterprise platform
-        that improved efficiency, reduced complexity, and enabled more confident,
-        AI-informed decision-making.
-      </p>
+      <div class="hero-copy">
+        <p class="eyebrow">SAAMA</p>
+        <h1>AI-Powered Life Sciences Platform</h1>
+        <p class="lead">
+          Reframing fragmented clinical research workflows into a scalable enterprise
+          platform that improved efficiency, reduced complexity, and made AI support
+          more usable in high-stakes environments.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img src="/images/SAAMA.jpg" alt="SAAMA platform case study visual" />
+      </figure>
     </section>
 
     <section class="snapshot-grid" aria-label="Case study snapshot">
@@ -55,47 +61,38 @@ const outcomes = [
     <section class="content-section">
       <h2>The situation</h2>
       <p>
-        Clinical trial professionals were operating across fragmented legacy systems,
-        overloaded interfaces, and disconnected workflows. Critical information was spread
-        across multiple tools, making routine work slower, more error-prone, and harder to
-        manage at scale.
+        Clinical trial teams were working across fragmented legacy systems, overloaded
+        interfaces, and disconnected workflows. Critical information was spread across
+        multiple tools, making routine work slower, harder to manage, and more error-prone.
       </p>
       <p>
-        As organizations pushed for faster, more intelligent clinical operations, the need
-        was not simply for a better interface. The need was for a unified platform that
-        could reduce cognitive load, support regulatory rigor, and make AI useful in
-        everyday decision-making.
+        The need was not just a better interface. It was a more coherent platform—one
+        that could reduce cognitive load, support regulatory rigor, and make AI useful
+        in everyday decision-making.
       </p>
     </section>
 
     <section class="content-section">
       <h2>The challenge</h2>
       <p>
-        The core challenge was to simplify highly complex, data-dense workflows without
+        The challenge was to simplify highly complex, data-dense workflows without
         oversimplifying the reality of clinical research operations. Teams needed faster
-        access to information, clearer prioritization, and confidence in the system’s
-        recommendations—especially where compliance and auditability mattered.
+        access to information, clearer prioritization, and confidence in system guidance.
       </p>
       <p>
-        This meant solving for more than usability. It required aligning workflow design,
-        information architecture, governance, and platform consistency across an enterprise
-        environment with multiple user roles, evolving requirements, and AI-enabled
-        capabilities.
+        This required more than usability improvements. It required aligning workflow
+        design, information architecture, governance, and platform consistency across
+        an enterprise environment with multiple roles and evolving requirements.
       </p>
     </section>
 
     <section class="content-section">
       <h2>My role</h2>
       <p>
-        As Director of Product Design, I operated across product strategy, design
+        As Director of Product Design, I worked across product strategy, design
         leadership, and systems governance. I guided designers and researchers, aligned
-        cross-functional stakeholders, and helped shape a platform direction that could
+        stakeholders across functions, and helped define a platform direction that could
         scale across modules, teams, and operational contexts.
-      </p>
-      <p>
-        My role was not limited to interface decisions. It included creating the structure,
-        standards, and decision frameworks needed to reduce fragmentation and improve how
-        product, design, and engineering worked together.
       </p>
     </section>
 
@@ -106,21 +103,21 @@ const outcomes = [
           <h3>Clarified the real problem</h3>
           <p>
             We reframed the work from “modernizing screens” to improving end-to-end
-            clinical workflows, reducing cognitive load, and making decision support more usable.
+            clinical workflows and making decision support more usable.
           </p>
         </article>
         <article class="info-card">
           <h3>Structured the system</h3>
           <p>
-            We used information hierarchy, modular patterns, and design system thinking to
-            create a more coherent platform foundation across products and roles.
+            We used information hierarchy, modular patterns, and design system thinking
+            to create a more coherent platform foundation.
           </p>
         </article>
         <article class="info-card">
           <h3>Aligned stakeholders</h3>
           <p>
-            I worked across product, engineering, and design to build shared understanding
-            around priorities, constraints, and platform direction.
+            I worked across product, engineering, and design to build shared
+            understanding around priorities, constraints, and platform direction.
           </p>
         </article>
         <article class="info-card">
@@ -159,10 +156,9 @@ const outcomes = [
     <section class="content-section">
       <h2>Reflection</h2>
       <p>
-        This work demonstrates the kind of design leadership I bring to complex
-        environments: not just improving interfaces, but building the systems,
-        governance, and cross-functional clarity needed to make platforms more usable,
-        scalable, and strategically valuable.
+        This work reflects the kind of design leadership I bring to complex environments:
+        not just improving interfaces, but building the systems, clarity, and operating
+        structure needed to make platforms more usable, scalable, and strategically valuable.
       </p>
     </section>
 
@@ -181,8 +177,15 @@ const outcomes = [
   }
 
   .hero {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
     margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
   }
 
   .eyebrow {
@@ -203,10 +206,26 @@ const outcomes = [
 
   .lead {
     margin-top: 1.2rem;
-    font-size: 1.1rem;
-    line-height: 1.85;
+    font-size: 1.08rem;
+    line-height: 1.8;
     color: #555;
-    max-width: 760px;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
   }
 
   .snapshot-grid {
@@ -259,8 +278,8 @@ const outcomes = [
   .content-section p {
     margin: 0 0 1rem;
     color: #444;
-    line-height: 1.85;
-    max-width: 840px;
+    line-height: 1.8;
+    max-width: 820px;
   }
 
   .cards-grid {
@@ -318,6 +337,11 @@ const outcomes = [
   }
 
   @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
     .snapshot-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -335,7 +359,11 @@ const outcomes = [
 
     .lead {
       font-size: 1.02rem;
-      line-height: 1.8;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
     }
   }
 </style>

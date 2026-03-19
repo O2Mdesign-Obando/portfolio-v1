@@ -1,341 +1,335 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const impactStats = [
+  { value: "$1.2B+", label: "Ecosystem Value Influenced" },
+  { value: "50M+", label: "Users Across Platforms" },
+  { value: "40%", label: "Operational Cost Reduction" },
+  { value: "300%", label: "User Adoption Growth" },
+];
+
+const positioning = [
+  {
+    title: "Strategy",
+    text: "Aligning product direction with business goals, market forces, and executive vision.",
+  },
+  {
+    title: "Systems",
+    text: "Designing scalable platforms, workflows, and governance models that compound over time.",
+  },
+  {
+    title: "Execution",
+    text: "Translating strategy into shipped products through cross-functional leadership and delivery discipline.",
+  },
+];
+
+const operatingModel = [
+  {
+    title: "See clearly",
+    text: "Identify the real problem beneath noise, assumptions, and fragmented signals.",
+  },
+  {
+    title: "Structure complexity",
+    text: "Turn ambiguity into usable frames, priorities, and decision paths that teams can act on.",
+  },
+  {
+    title: "Align the system",
+    text: "Bring leadership, product, design, engineering, and data into shared understanding and coordinated execution.",
+  },
+  {
+    title: "Drive execution",
+    text: "Move from direction to shipped outcomes with rigor, accountability, and sustainable momentum.",
+  },
+];
+
+const featuredWork = [
+  {
+    kicker: "Featured Case Study",
+    title: "AI-Powered Life Sciences Platform",
+    description:
+      "Enterprise-wide digital and AI experience strategy for clinical research.",
+    outcome:
+      "Aligned product, data, and research workflows to improve decision-making and accelerate trial execution.",
+    href: "/case-studies/ai-life-sciences-platform",
+  },
+  {
+    kicker: "Featured Case Study",
+    title: "SMB Marketplace & Fintech Ecosystem",
+    description:
+      "Unified marketplace and fintech ecosystem for millions of SMBs across Latin America.",
+    outcome:
+      "Consolidated fragmented tools into a scalable platform, enabling new revenue streams and operational efficiency at regional scale.",
+    href: "/case-studies/smb-marketplace-fintech",
+  },
+];
+
+const thinkingHighlights = [
+  {
+    title: "Designing Through Change: From Pages to Platforms to Intelligence",
+    description:
+      "A three-part series on how product design evolves from static interfaces to systems, platforms, and intelligent experiences.",
+    href: "/thinking",
+  },
+  {
+    title: "Measuring What Matters: Tying Design Decisions to Business KPIs",
+    description:
+      "How to connect design choices to growth, efficiency, and measurable business outcomes.",
+    href: "/thinking",
+  },
+  {
+    title: "Building a Governed Product System",
+    description:
+      "Why durable digital products require governance, observability, and system-level decision frameworks.",
+    href: "/thinking",
+  },
+];
+
+const credibility = [
+  "SAAMA Technologies",
+  "AB InBev",
+  "American Express",
+  "Medidata",
+];
 ---
 
 <MainLayout title="Jorge Obando | Director of Product Design">
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Director of Product Design · Enterprise Platforms · AI Integration</p>
-      <h1>I design and govern systems that scale.</h1>
-      <p class="lead">
-        Design leader operating at the intersection of strategy, systems, and execution—building
-        enterprise platforms that deliver measurable business impact.
-      </p>
-      <p class="supporting">
-        I lead design as a strategic function, not a service—aligning product, engineering, data,
-        and executive vision to deliver scalable, AI-enhanced platforms. My work focuses on
-        transforming complex business challenges into governed systems that drive adoption,
-        efficiency, and long-term value.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button button-primary" href="/case-studies">View Case Studies</a>
-        <a class="button button-secondary" href="/resume">Download Resume</a>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <img src="/images/profile.jpg" alt="Jorge Obando portrait" class="hero-image" />
-    </div>
-  </section>
-
-  <section class="proof-bar" aria-labelledby="enterprise-impact-title">
-    <div class="section-heading">
-      <p class="section-label" id="enterprise-impact-title">Enterprise Impact</p>
-    </div>
-
-    <div class="proof-grid">
-      <article class="proof-item">
-        <h2>$1.2B+</h2>
-        <p>Ecosystem Value Influenced</p>
-      </article>
-
-      <article class="proof-item">
-        <h2>50M+</h2>
-        <p>Users Across Platforms</p>
-      </article>
-
-      <article class="proof-item">
-        <h2>40%</h2>
-        <p>Operational Cost Reduction</p>
-      </article>
-
-      <article class="proof-item">
-        <h2>300%</h2>
-        <p>User Adoption Growth</p>
-      </article>
-    </div>
-
-    <p class="proof-note">
-      Delivered through enterprise platforms, AI integration, and cross-functional leadership.
-    </p>
-  </section>
-
-  <section class="positioning" aria-labelledby="positioning-title">
-    <div class="section-heading">
-      <p class="section-label">Positioning</p>
-      <h2 id="positioning-title">I operate at the intersection of:</h2>
-    </div>
-
-    <div class="three-up-grid">
-      <article class="card">
-        <h3>Strategy</h3>
-        <p>
-          Aligning product direction with business goals, market forces, and executive vision.
+  <section class="home-page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Director of Product Design · Enterprise Platforms · AI Integration</p>
+        <h1>I design and govern systems that scale.</h1>
+        <p class="lead">
+          Design leader operating at the intersection of strategy, systems, and execution—building
+          enterprise platforms that deliver measurable business impact.
         </p>
-      </article>
-
-      <article class="card">
-        <h3>Systems</h3>
-        <p>
-          Designing scalable platforms, workflows, and governance models that compound over time.
+        <p class="supporting">
+          I lead design as a strategic function, not a service—aligning product, engineering, data,
+          and executive vision to deliver scalable, AI-enhanced platforms. My work focuses on
+          transforming complex business challenges into governed systems that drive adoption,
+          efficiency, and long-term value.
         </p>
-      </article>
 
-      <article class="card">
-        <h3>Execution</h3>
-        <p>
-          Translating strategy into shipped products through cross-functional leadership and
-          delivery discipline.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="operating-model" aria-labelledby="operating-model-title">
-    <div class="section-heading">
-      <p class="section-label">Operating Model</p>
-      <h2 id="operating-model-title">How I Operate</h2>
-      <p class="section-intro">
-        A structured approach to turning research, systems, and AI into measurable business
-        outcomes.
-      </p>
-    </div>
-
-    <div class="three-up-grid">
-      <article class="card">
-        <h3>Decision Clarity</h3>
-        <p>
-          Turning research and insight into clear, accountable product decisions that align teams
-          and reduce ambiguity.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Scalable Systems</h3>
-        <p>
-          Designing platforms, workflows, and design systems that scale across products, markets,
-          and organizations.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Responsible AI Governance</h3>
-        <p>
-          Integrating AI with human judgment, transparency, and accountability to ensure systems
-          are effective, ethical, and measurable.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="featured-work" aria-labelledby="featured-work-title">
-    <div class="section-heading">
-      <p class="section-label">Selected Work</p>
-      <h2 id="featured-work-title">Enterprise Transformations</h2>
-      <p class="section-intro">
-        Selected work demonstrating how strategy, systems, and AI translate into measurable
-        business outcomes.
-      </p>
-    </div>
-
-    <div class="feature-list">
-      <article class="feature-card">
-        <p class="feature-kicker">Featured Case Study</p>
-        <h3>AI-Powered Life Sciences Platform</h3>
-        <p>
-          Enterprise-wide digital and AI experience strategy for clinical research.
-        </p>
-        <p class="feature-outcome">
-          Aligned product, data, and research workflows to improve decision-making and accelerate
-          trial execution.
-        </p>
-        <a href="/case-studies/ai-life-sciences-platform">View Case Study</a>
-      </article>
-
-      <article class="feature-card">
-        <p class="feature-kicker">Featured Case Study</p>
-        <h3>SMB Marketplace &amp; Fintech Ecosystem</h3>
-        <p>
-          Unified marketplace and fintech ecosystem for millions of SMBs across Latin America.
-        </p>
-        <p class="feature-outcome">
-          Consolidated fragmented tools into a scalable platform, enabling new revenue streams and
-          operational efficiency at regional scale.
-        </p>
-        <a href="/case-studies/smb-marketplace-fintech">View Case Study</a>
-      </article>
-    </div>
-
-    <p class="section-link">
-      <a href="/case-studies">View All Work</a>
-    </p>
-  </section>
-
-  <section class="audience-paths" aria-labelledby="audience-paths-title">
-    <div class="section-heading">
-      <p class="section-label">Audience Paths</p>
-      <h2 id="audience-paths-title">Explore by Role</h2>
-      <p class="section-intro">
-        Select your perspective to see the most relevant view of my work and experience.
-      </p>
-    </div>
-
-    <div class="audience-grid">
-      <article class="card">
-        <h3>Hiring Managers</h3>
-        <p>Execution, outcomes, and leadership at scale.</p>
-      </article>
-
-      <article class="card">
-        <h3>Founders / Executives</h3>
-        <p>Strategic alignment, platform thinking, and business impact.</p>
-      </article>
-
-      <article class="card">
-        <h3>Product Leaders</h3>
-        <p>Systems thinking, cross-functional collaboration, and delivery.</p>
-      </article>
-
-      <article class="card">
-        <h3>Recruiters</h3>
-        <p>Clear signal, structured experience, and fast evaluation.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="advisory" aria-labelledby="advisory-title">
-    <div class="section-heading">
-      <p class="section-label">Advisory</p>
-      <h2 id="advisory-title">Design Leadership at Scale</h2>
-      <p class="section-intro">
-        Fractional and advisory design leadership to accelerate platform transformation, AI
-        integration, and organizational scale.
-      </p>
-    </div>
-
-    <div class="advisory-panel">
-      <p class="advisory-copy">
-        I partner with organizations to lead critical design initiatives without the overhead of
-        full-time leadership—aligning strategy, systems, and execution to deliver measurable
-        business outcomes.
-      </p>
-
-      <ul class="engagement-list">
-        <li>Interim Design Leadership</li>
-        <li>AI Transformation Strategy</li>
-        <li>Design System Modernization</li>
-        <li>Organizational Design &amp; Hiring</li>
-      </ul>
-
-      <div class="advisory-grid">
-        <article>
-          <h3>Strategic Leadership</h3>
-          <p>C-suite alignment and cross-functional orchestration.</p>
-        </article>
-
-        <article>
-          <h3>AI Integration</h3>
-          <p>Ethical frameworks, predictive systems, and governance.</p>
-        </article>
-
-        <article>
-          <h3>Business Impact</h3>
-          <p>KPI-driven outcomes and measurable performance.</p>
-        </article>
-
-        <article>
-          <h3>Team Building</h3>
-          <p>Scaling global teams, culture, and capability.</p>
-        </article>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/case-studies">View Case Studies</a>
+          <a class="button button-secondary" href="/resume">Download Resume</a>
+        </div>
       </div>
 
-      <a class="button button-primary" href="/contact">Discuss an Engagement</a>
-    </div>
-  </section>
-
-  <section class="credibility" aria-labelledby="credibility-title">
-    <div class="section-heading">
-      <p class="section-label">Credibility</p>
-      <h2 id="credibility-title">Trusted by Enterprise Organizations</h2>
-      <p class="section-intro">
-        Experience across Fortune 500 companies and high-growth organizations.
-      </p>
-    </div>
-
-    <div class="logo-cloud" aria-label="Past clients and employers">
-      <span>SAAMA Technologies</span>
-      <span>AB InBev</span>
-      <span>American Express</span>
-      <span>Medidata</span>
-    </div>
-  </section>
-
-  <section class="cta-band" aria-labelledby="cta-band-title">
-    <div class="cta-band-inner">
-      <p class="section-label section-label-light">Next Step</p>
-      <h2 id="cta-band-title">Ready to build systems that scale?</h2>
-      <p>
-        Let’s align strategy, systems, and execution to drive measurable impact.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button button-inverse" href="/contact">Start a Conversation</a>
-        <a class="button button-ghost" href="/case-studies">View Case Studies</a>
+      <div class="hero-visual">
+        <img src="/images/profile.jpg" alt="Jorge Obando portrait" class="hero-image" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="thinking-layer" aria-labelledby="thinking-layer-title">
-    <div class="section-heading">
-      <p class="section-label">Perspective</p>
-      <h2 id="thinking-layer-title">Why This Matters</h2>
-    </div>
+    <section class="content-section proof-bar" aria-labelledby="enterprise-impact-title">
+      <div class="section-heading">
+        <p class="section-label" id="enterprise-impact-title">Enterprise Impact</p>
+      </div>
 
-    <div class="three-up-grid">
-      <article class="card">
-        <h3>Outcomes-Driven Leadership</h3>
-        <p>Design aligned with strategic business goals and measurable outcomes.</p>
-      </article>
+      <div class="proof-grid">
+        {impactStats.map((item) => (
+          <article class="proof-item">
+            <h2>{item.value}</h2>
+            <p>{item.label}</p>
+          </article>
+        ))}
+      </div>
 
-      <article class="card">
-        <h3>Cross-Functional Orchestration</h3>
-        <p>Aligning product, engineering, data, and leadership to accelerate impact.</p>
-      </article>
+      <p class="proof-note">
+        Delivered through enterprise platforms, AI integration, and cross-functional leadership.
+      </p>
+    </section>
 
-      <article class="card">
-        <h3>AI as a Strategic Tool</h3>
-        <p>Applying AI to solve real problems with transparency and accountability.</p>
-      </article>
-    </div>
+    <section class="content-section" aria-labelledby="positioning-title">
+      <div class="section-heading">
+        <p class="section-label">Positioning</p>
+        <h2 id="positioning-title">I operate at the intersection of:</h2>
+      </div>
+
+      <div class="cards-grid three-up">
+        {positioning.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="operating-model-title">
+      <div class="section-heading">
+        <p class="section-label">Operating Model</p>
+        <h2 id="operating-model-title">How I operate</h2>
+        <p class="section-intro">
+          A structured approach to turning complexity into aligned execution and measurable business outcomes.
+        </p>
+      </div>
+
+      <div class="cards-grid two-up">
+        {operatingModel.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+
+      <p class="section-link">
+        <a href="/narrative">See how I operate</a>
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="featured-work-title">
+      <div class="section-heading">
+        <p class="section-label">Selected Work</p>
+        <h2 id="featured-work-title">Enterprise transformations</h2>
+        <p class="section-intro">
+          See how strategy, systems, and AI show up in real platforms, workflows, and business outcomes.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        {featuredWork.map((item) => (
+          <article class="feature-card">
+            <p class="feature-kicker">{item.kicker}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <p class="feature-outcome">{item.outcome}</p>
+            <a href={item.href}>View Case Study</a>
+          </article>
+        ))}
+      </div>
+
+      <p class="section-link">
+        <a href="/case-studies">View all work</a>
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="thinking-layer-title">
+      <div class="section-heading">
+        <p class="section-label">Thinking</p>
+        <h2 id="thinking-layer-title">Perspective on systems, AI, and product strategy</h2>
+        <p class="section-intro">
+          A curated knowledge layer on designing complex systems, integrating AI, and tying product decisions to business outcomes.
+        </p>
+      </div>
+
+      <div class="cards-grid three-up">
+        {thinkingHighlights.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <a class="card-link" href={item.href}>Read Article</a>
+          </article>
+        ))}
+      </div>
+
+      <p class="section-link">
+        <a href="/thinking">Explore Thinking</a>
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="advisory-title">
+      <div class="section-heading">
+        <p class="section-label">Advisory</p>
+        <h2 id="advisory-title">Design leadership at scale</h2>
+        <p class="section-intro">
+          Fractional and advisory design leadership to accelerate platform transformation, AI integration, and organizational scale.
+        </p>
+      </div>
+
+      <div class="advisory-panel">
+        <p class="advisory-copy">
+          I partner with organizations to lead critical design initiatives without the overhead of
+          full-time leadership—aligning strategy, systems, and execution to deliver measurable
+          business outcomes.
+        </p>
+
+        <ul class="engagement-list">
+          <li>Interim Design Leadership</li>
+          <li>AI Transformation Strategy</li>
+          <li>Design System Modernization</li>
+          <li>Organizational Design &amp; Hiring</li>
+        </ul>
+
+        <div class="cards-grid two-up advisory-grid">
+          <article>
+            <h3>Strategic Leadership</h3>
+            <p>C-suite alignment and cross-functional orchestration.</p>
+          </article>
+
+          <article>
+            <h3>AI Integration</h3>
+            <p>Ethical frameworks, predictive systems, and governance.</p>
+          </article>
+
+          <article>
+            <h3>Business Impact</h3>
+            <p>KPI-driven outcomes and measurable performance.</p>
+          </article>
+
+          <article>
+            <h3>Team Building</h3>
+            <p>Scaling global teams, culture, and capability.</p>
+          </article>
+        </div>
+
+        <a class="button button-primary" href="/contact">Discuss an Engagement</a>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="credibility-title">
+      <div class="section-heading">
+        <p class="section-label">Credibility</p>
+        <h2 id="credibility-title">Trusted by enterprise organizations</h2>
+        <p class="section-intro">
+          Experience across Fortune 500 companies and high-growth organizations.
+        </p>
+      </div>
+
+      <div class="logo-cloud" aria-label="Past clients and employers">
+        {credibility.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-band-title">
+      <div class="cta-band-inner">
+        <p class="section-label section-label-light">Next Step</p>
+        <h2 id="cta-band-title">Ready to build systems that scale?</h2>
+        <p>
+          Let’s align strategy, systems, and execution to drive measurable impact.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-inverse" href="/contact">Start a Conversation</a>
+          <a class="button button-ghost" href="/case-studies">View Case Studies</a>
+        </div>
+      </div>
+    </section>
   </section>
 
   <style>
-    :global(main) {
-      max-width: 1120px;
-      padding: 32px 24px 96px;
-    }
-
-    section {
-      margin-top: 88px;
+    .home-page {
+      padding: 2.5rem 0 5rem;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 3rem;
       align-items: start;
-      margin-top: 48px;
+      margin-top: 0;
     }
 
     .eyebrow,
     .section-label {
-      margin: 0 0 16px;
-      font-size: 13px;
-      line-height: 1.4;
+      margin: 0 0 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #666666;
+      color: #a33a3a;
     }
 
     .section-label-light {
@@ -343,18 +337,18 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .hero h1 {
+      margin: 0;
       font-size: clamp(2.8rem, 6vw, 5rem);
       line-height: 1.02;
       letter-spacing: -0.04em;
-      margin-bottom: 20px;
       max-width: 10ch;
     }
 
     .lead {
-      font-size: 24px;
-      line-height: 1.45;
+      margin: 1.2rem 0 1rem;
+      font-size: 1.3rem;
+      line-height: 1.5;
       color: #1a1a1a;
-      margin: 0 0 16px;
       max-width: 30ch;
     }
 
@@ -362,18 +356,18 @@ import MainLayout from "../layouts/MainLayout.astro";
     .section-intro,
     .advisory-copy,
     .cta-band p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #444444;
       margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #555;
       max-width: 62ch;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
+      gap: 0.75rem;
+      margin-top: 1.6rem;
     }
 
     .button {
@@ -383,9 +377,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       min-height: 48px;
       padding: 0 18px;
       border-radius: 999px;
-      border: 1px solid #111111;
+      border: 1px solid #111;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 0.95rem;
       font-weight: 600;
       transition: opacity 0.2s ease;
     }
@@ -395,20 +389,20 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .button-primary {
-      background: #111111;
-      color: #ffffff;
+      background: #111;
+      color: #fff;
     }
 
     .button-secondary,
     .button-ghost {
       background: transparent;
-      color: #111111;
+      color: #111;
     }
 
     .button-inverse {
-      background: #ffffff;
-      color: #111111;
-      border-color: #ffffff;
+      background: #fff;
+      color: #111;
+      border-color: #fff;
     }
 
     .hero-visual {
@@ -428,27 +422,29 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: block;
     }
 
+    .content-section {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--divider);
+    }
+
     .section-heading {
-      margin-bottom: 28px;
+      margin-bottom: 1.5rem;
+      max-width: 760px;
     }
 
     .section-heading h2 {
+      margin: 0 0 0.75rem;
       font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
+      line-height: 1.08;
       letter-spacing: -0.03em;
-      margin-bottom: 12px;
-    }
-
-    .proof-bar {
-      padding-top: 20px;
     }
 
     .proof-grid,
-    .three-up-grid,
-    .audience-grid,
-    .advisory-grid {
+    .cards-grid,
+    .logo-cloud {
       display: grid;
-      gap: 20px;
+      gap: 1rem;
     }
 
     .proof-grid {
@@ -456,14 +452,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .proof-item {
-      padding-top: 20px;
+      padding-top: 1.2rem;
       border-top: 1px solid #dddddd;
     }
 
     .proof-item h2 {
+      margin: 0 0 0.5rem;
       font-size: clamp(2rem, 4vw, 2.75rem);
       line-height: 1;
-      margin-bottom: 10px;
     }
 
     .proof-item p,
@@ -471,23 +467,24 @@ import MainLayout from "../layouts/MainLayout.astro";
     .feature-card p,
     .card p,
     .advisory-grid p,
-    .logo-cloud span {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555555;
+    .logo-cloud span,
+    .card-link {
       margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #555;
     }
 
     .proof-note {
-      margin-top: 24px;
+      margin-top: 1.2rem;
       max-width: 60ch;
     }
 
-    .three-up-grid {
+    .cards-grid.three-up {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .audience-grid,
+    .cards-grid.two-up,
     .advisory-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -497,85 +494,86 @@ import MainLayout from "../layouts/MainLayout.astro";
     .advisory-panel {
       border: 1px solid #e5e5e5;
       border-radius: 24px;
-      padding: 24px;
+      padding: 1.5rem;
       background: #ffffff;
     }
 
     .card h3,
     .feature-card h3,
     .advisory-grid h3 {
-      font-size: 22px;
-      line-height: 1.2;
-      margin: 0 0 10px;
+      margin: 0 0 0.65rem;
+      font-size: 1.2rem;
+      line-height: 1.25;
     }
 
     .feature-list {
       display: grid;
-      gap: 20px;
+      gap: 1rem;
     }
 
     .feature-kicker {
-      font-size: 12px;
+      margin: 0 0 0.65rem;
+      font-size: 0.72rem;
       line-height: 1.4;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #666666;
-      margin-bottom: 12px;
     }
 
     .feature-outcome {
-      margin-top: 12px;
+      margin-top: 0.75rem;
     }
 
     .feature-card a,
-    .section-link a {
+    .section-link a,
+    .card-link {
       display: inline-block;
-      margin-top: 18px;
-      font-size: 15px;
+      margin-top: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      color: #111111;
+      color: #111;
       text-decoration: none;
     }
 
     .section-link {
-      margin-top: 24px;
+      margin-top: 1rem;
     }
 
     .engagement-list {
-      margin: 20px 0 28px;
-      padding-left: 20px;
-      color: #444444;
-      font-size: 16px;
+      margin: 1rem 0 1.6rem;
+      padding-left: 1.2rem;
+      color: #444;
+      font-size: 0.98rem;
       line-height: 1.8;
     }
 
     .advisory-grid {
-      margin-bottom: 28px;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
     }
 
     .logo-cloud {
-      display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-      padding-top: 8px;
+      padding-top: 0.25rem;
     }
 
     .logo-cloud span {
       display: block;
       border: 1px solid #e5e5e5;
       border-radius: 999px;
-      padding: 12px 16px;
+      padding: 0.8rem 1rem;
       text-align: center;
-      color: #222222;
+      color: #222;
       background: #fafafa;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
     .cta-band {
-      background: #111111;
-      color: #ffffff;
+      margin-top: 3rem;
+      background: #111;
+      color: #fff;
       border-radius: 32px;
-      padding: 48px 32px;
+      padding: 3rem 2rem;
     }
 
     .cta-band-inner {
@@ -583,11 +581,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .cta-band h2 {
-      color: #ffffff;
+      margin: 0 0 0.75rem;
+      color: #fff;
       font-size: clamp(2rem, 4vw, 3.25rem);
       line-height: 1.08;
       letter-spacing: -0.03em;
-      margin: 0 0 12px;
     }
 
     .cta-band p {
@@ -595,54 +593,40 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .cta-band .button-ghost {
-      color: #ffffff;
+      color: #fff;
       border-color: rgba(255, 255, 255, 0.32);
     }
 
     @media (max-width: 960px) {
-      .hero,
-      .proof-grid,
-      .three-up-grid,
-      .logo-cloud {
-        grid-template-columns: 1fr 1fr;
+      .hero {
+        grid-template-columns: 1fr;
       }
 
-      .hero {
-        align-items: stretch;
+      .proof-grid,
+      .cards-grid.three-up,
+      .logo-cloud {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 720px) {
-      :global(main) {
-        padding: 24px 20px 80px;
+      .home-page {
+        padding: 1.5rem 0 4rem;
       }
 
-      section {
-        margin-top: 72px;
-      }
-
-      .hero,
       .proof-grid,
-      .three-up-grid,
-      .audience-grid,
-      .advisory-grid,
+      .cards-grid.three-up,
+      .cards-grid.two-up,
       .logo-cloud {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        gap: 28px;
+        gap: 1.75rem;
       }
 
       .lead {
-        font-size: 21px;
-      }
-
-      .supporting,
-      .section-intro,
-      .advisory-copy,
-      .cta-band p {
-        font-size: 17px;
+        font-size: 1.1rem;
       }
 
       .hero-image {
@@ -652,7 +636,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       .cta-band {
         border-radius: 24px;
-        padding: 36px 24px;
+        padding: 2.25rem 1.5rem;
       }
     }
   </style>

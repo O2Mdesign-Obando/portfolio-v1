@@ -1,37 +1,273 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const workTogether = [
+  "Full-time leadership (Director / VP / Head of Design)",
+  "Fractional advisory and strategic consulting",
+  "AI design integration workshops",
+  "Executive strategy sessions",
+  "Speaking and corporate training engagements",
+];
+
+const helpWith = [
+  "Product design leadership",
+  "UX strategy and research",
+  "Design system creation",
+  "Team building and mentoring",
+  "Digital transformation",
+  "Innovation consulting",
+];
 ---
 
-<MainLayout title="Contact — Jorge Obando">
-  <h1>Contact</h1>
+<MainLayout title="Contact | Jorge Obando">
+  <section class="contact-page">
+    <section class="hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s build something meaningful.</h1>
+      <p class="lead">
+        Looking for a design leader who can turn complexity into clarity across
+        product, platforms, and AI-enabled systems? I’d love to hear from you.
+      </p>
+    </section>
 
-  <p style="font-size: 22px; margin-top: 16px;">
-    Open to conversations about product design leadership, platform strategy, and AI-native experiences.
-  </p>
+    <section class="contact-grid">
+      <section class="primary-column">
+        <div class="contact-card">
+          <h2>Get in touch</h2>
 
-  <div style="margin-top: 32px; border-top: 1px solid var(--divider);"></div>
+          <div class="contact-list">
+            <div class="contact-item">
+              <p class="contact-label">Email</p>
+              <p class="contact-value">
+                <a href="mailto:jorgerobando@hotmail.com">jorgerobando@hotmail.com</a>
+              </p>
+            </div>
 
-  <section style="margin-top: 48px;">
+            <div class="contact-item">
+              <p class="contact-label">Phone</p>
+              <p class="contact-value">
+                <a href="tel:+12037278979">(203) 727-8979</a>
+              </p>
+            </div>
 
-    <p>
-      The best way to reach me is via email:
-    </p>
+            <div class="contact-item">
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value">
+                <a href="https://www.linkedin.com/in/jorgerobando/" target="_blank" rel="noopener noreferrer">
+                  Connect with me
+                </a>
+              </p>
+            </div>
 
-    <p style="margin-top: 16px;">
-      <a href="mailto:jorgerobando@hotmail.com" style="font-size: 20px;">
-        jorgerobando@hotmail.com
-      </a>
-    </p>
+            <div class="contact-item">
+              <p class="contact-label">Intch</p>
+              <p class="contact-value">
+                <a href="https://intch.org/p/19675033" aria-disabled="true">View my profile</a>
+              </p>
+            </div>
 
-    <p style="margin-top: 32px;">
-      You can also connect with me on LinkedIn:
-    </p>
+            <div class="contact-item">
+              <p class="contact-label">Resume</p>
+              <p class="contact-value">
+                <a href="/resume">View resume</a>
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <p style="margin-top: 16px;">
-      <a href="https://www.linkedin.com/in/jorgerobando/" target="_blank" style="font-size: 20px;">
-        LinkedIn Profile
-      </a>
-    </p>
+        <div class="content-section">
+          <h2>How we can work together</h2>
+          <div class="info-card">
+            <ul>
+              {workTogether.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
+        <div class="content-section">
+          <h2>What I can help with</h2>
+          <div class="info-card">
+            <ul>
+              {helpWith.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside class="secondary-column">
+        <div class="snapshot-card">
+          <p class="snapshot-label">Location</p>
+          <p class="snapshot-value">Available remotely</p>
+        </div>
+
+        <div class="snapshot-card">
+          <p class="snapshot-label">Response Time</p>
+          <p class="snapshot-value">Within 24 hours</p>
+        </div>
+
+        <div class="snapshot-card">
+          <p class="snapshot-label">Best fit</p>
+          <p class="snapshot-value">
+            Leadership roles, strategic consulting, platform transformation, and
+            AI-native product work.
+          </p>
+        </div>
+      </aside>
+    </section>
   </section>
 </MainLayout>
+
+<style>
+  .contact-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+    max-width: 760px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+    gap: 1.25rem 2rem;
+    align-items: start;
+  }
+
+  .primary-column,
+  .secondary-column {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .contact-card,
+  .info-card,
+  .snapshot-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card h2,
+  .content-section h2 {
+    margin: 0 0 1.1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .contact-item {
+    padding-top: 1rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .contact-item:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .contact-label,
+  .snapshot-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .contact-value,
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.7;
+    color: #222;
+  }
+
+  .contact-value a,
+  .snapshot-value a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .content-section {
+    margin-top: 0.25rem;
+  }
+
+  .info-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .info-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .info-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .info-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  @media (max-width: 920px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+  }
+</style>

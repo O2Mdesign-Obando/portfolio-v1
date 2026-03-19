@@ -1,0 +1,251 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Governed Product System | Jorge Obando">
+  <section class="article-page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Thinking</p>
+      <h1>Building a Governed Product System: From Design Systems to Observability</h1>
+      <p class="lead">
+        A component library is not a product system. Real systems are governed,
+        observable, and capable of evolving without drift.
+      </p>
+    </section>
+
+    <!-- HERO IMAGE -->
+    <figure class="hero-image">
+      <img src="/images/governed-product-system.jpg" alt="Illustration of governed product systems, observability, and intelligent interfaces" />
+    </figure>
+
+    <!-- CONTENT -->
+    <section class="content">
+
+      <h2>Introduction</h2>
+
+      <p>
+        Most design systems stop at components. They provide buttons, tokens, and
+        spacing rules—and call it done. But a component library is not a product
+        system.
+      </p>
+
+      <p>
+        A real product system is governed, observable, and capable of evolving
+        without drift.
+      </p>
+
+      <p class="highlight">
+        Design does not fail from lack of craft. It fails from lack of discipline at scale.
+      </p>
+
+      <h2>The Foundation: A Real Design System</h2>
+
+      <p>
+        The first structural decision is to treat the design system as a live,
+        versioned production artifact—not a static design library.
+      </p>
+
+      <ul>
+        <li>Centralized token architecture as a single source of truth</li>
+        <li>Component governance with explicit contracts and anti-patterns</li>
+        <li>Accessibility enforcement with measurable compliance</li>
+        <li>Live preview systems for real interaction validation</li>
+      </ul>
+
+      <p>
+        Consistency is not maintained by convention. It is enforced through structure.
+      </p>
+
+      <h2>Deterministic vs Generative AI</h2>
+
+      <p>
+        One of the most critical architectural decisions is choosing deterministic
+        intelligence for operational workflows.
+      </p>
+
+      <p>
+        Generative AI excels at exploration and content creation. But operational
+        systems require reliability, auditability, and precision.
+      </p>
+
+      <p class="highlight">
+        When a system reports a metric, it must be correct—not plausible.
+      </p>
+
+      <p>
+        Deterministic systems ensure:
+      </p>
+
+      <ul>
+        <li>No hallucinated outputs</li>
+        <li>Clear intent boundaries</li>
+        <li>Predictable system behavior</li>
+        <li>Auditability of decisions</li>
+      </ul>
+
+      <h2>Making Interfaces Observable</h2>
+
+      <p>
+        Observability is the ability to understand system behavior through signals.
+      </p>
+
+      <p>
+        In product systems, this requires:
+      </p>
+
+      <ul>
+        <li>Structured event taxonomy</li>
+        <li>Stable component identifiers</li>
+        <li>Controlled instrumentation layers</li>
+      </ul>
+
+      <p>
+        Without observability, behavior is invisible. Without signal, there is no learning.
+      </p>
+
+      <h2>Governance as a Capability</h2>
+
+      <p>
+        Governance is often treated as constraint. In reality, it is a system capability.
+      </p>
+
+      <p>
+        Effective governance enables:
+      </p>
+
+      <ul>
+        <li>Token compliance enforcement</li>
+        <li>Accessibility tracking and validation</li>
+        <li>Versioned architecture decisions</li>
+        <li>Disciplined release structures</li>
+      </ul>
+
+      <p class="highlight">
+        Governance does not slow systems down. It allows them to scale safely.
+      </p>
+
+      <h2>Designing for Evolution</h2>
+
+      <p>
+        A governed system is not static. It is built to evolve.
+      </p>
+
+      <p>
+        New capabilities—experimentation, adaptive interfaces, AI-assisted workflows—
+        are only possible when the underlying system is structured correctly.
+      </p>
+
+      <ul>
+        <li>Experimentation requires observability</li>
+        <li>Adaptive systems require governance</li>
+        <li>AI requires both</li>
+      </ul>
+
+      <p>
+        AI amplifies structure. It does not replace it.
+      </p>
+
+      <h2>Looking Ahead</h2>
+
+      <p>
+        The next generation of systems will not be defined by features, but by their
+        ability to evolve intelligently.
+      </p>
+
+      <p>
+        Systems that are governed, observable, and measurable will adapt.
+        Systems without structure will drift.
+      </p>
+
+      <p class="highlight">
+        A Governed Product System is not built quickly. It is built correctly.
+      </p>
+
+    </section>
+
+  </section>
+</MainLayout>
+
+<style>
+  .article-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #555;
+  }
+
+  .hero-image {
+    margin: 2.5rem 0 3.5rem;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  .content {
+    max-width: 760px;
+  }
+
+  .content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+  }
+
+  .content p {
+    margin-bottom: 1.1rem;
+    line-height: 1.85;
+    color: #444;
+  }
+
+  .content ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.2rem;
+  }
+
+  .content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight {
+    font-weight: 500;
+    color: #111;
+  }
+
+  @media (max-width: 768px) {
+    .article-page {
+      padding: 1.5rem 0 4rem;
+    }
+  }
+</style>

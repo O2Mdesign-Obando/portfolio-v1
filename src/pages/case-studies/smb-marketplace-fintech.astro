@@ -28,30 +28,33 @@ const decisions = [
 ];
 
 const outcomes = [
-  "Enabled a unified marketplace and fintech ecosystem serving 2M+ SMBs across Latin America.",
+  "Built a unified marketplace and fintech ecosystem serving more than 2 million SMBs across Latin America.",
   "Generated $1.2B+ in annual gross merchandise value through integrated platform capabilities.",
-  "Unlocked new revenue streams through embedded financial services (credit, payments).",
-  "Improved operational efficiency for SMBs by reducing fragmentation across tools and workflows.",
-  "Positioned AB InBev as a digital transformation leader in the SMB marketplace ecosystem.",
+  "Unlocked new revenue streams through embedded financial services including credit and payments.",
+  "Improved SMB operating efficiency by reducing fragmentation across procurement, payments, and vendor workflows.",
+  "Strengthened AB InBev’s position as a digital transformation leader in the SMB marketplace ecosystem.",
 ];
 ---
 
 <MainLayout title="SMB Marketplace & Fintech Ecosystem | Jorge Obando">
   <section class="case-study-page">
-
-    <!-- HERO -->
     <section class="hero">
-      <p class="eyebrow">AB InBev / Z-Tech</p>
-      <h1>SMB Marketplace & Fintech Ecosystem</h1>
-      <p class="lead">
-        Transforming fragmented SMB operations into a unified marketplace and fintech
-        platform—unlocking new revenue streams, improving efficiency, and enabling
-        millions of businesses to scale.
-      </p>
+      <div class="hero-copy">
+        <p class="eyebrow">AB InBev / Z-Tech</p>
+        <h1>SMB Marketplace & Fintech Ecosystem</h1>
+        <p class="lead">
+          Transforming fragmented SMB operations into a unified marketplace and fintech
+          platform—unlocking new revenue streams, improving efficiency, and enabling
+          millions of businesses to operate and grow through a single ecosystem.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img src="/images/AB InBev.jpg" alt="AB InBev Z-Tech marketplace and fintech case study visual" />
+      </figure>
     </section>
 
-    <!-- SNAPSHOT -->
-    <section class="snapshot-grid">
+    <section class="snapshot-grid" aria-label="Case study snapshot">
       {snapshot.map((item) => (
         <article class="snapshot-card">
           <p class="snapshot-label">{item.label}</p>
@@ -60,36 +63,33 @@ const outcomes = [
       ))}
     </section>
 
-    <!-- SITUATION -->
     <section class="content-section">
       <h2>The situation</h2>
       <p>
-        Small and medium-sized businesses (SMBs) across Latin America operated in highly
+        Small and medium-sized businesses across Latin America operated in highly
         fragmented environments. Procurement, payments, inventory, and vendor management
-        were handled through disconnected tools—often informal channels such as messaging
-        apps, phone calls, and manual processes.
+        were often spread across disconnected tools, messaging apps, phone calls, and
+        manual processes.
       </p>
       <p>
-        This fragmentation limited growth, reduced efficiency, and prevented SMBs from
-        accessing financial services that could expand their operations.
+        That fragmentation limited growth, reduced efficiency, and kept many SMBs from
+        accessing financial services that could help them operate more effectively.
       </p>
     </section>
 
-    <!-- CHALLENGE -->
     <section class="content-section">
       <h2>The challenge</h2>
       <p>
-        The challenge was to design a platform that could unify procurement, payments,
-        and financial services into a single system—while remaining usable for a highly
-        diverse user base with varying levels of digital literacy.
+        The challenge was to unify procurement, payments, and financial services in a
+        single platform while keeping the experience usable for a highly diverse audience
+        with different levels of digital literacy.
       </p>
       <p>
-        This required balancing marketplace dynamics, fintech capabilities, regional
-        complexity, and real-world operational constraints across multiple countries.
+        This meant balancing marketplace dynamics, fintech capabilities, regional
+        complexity, and real-world operating constraints across multiple countries.
       </p>
     </section>
 
-    <!-- ROLE -->
     <section class="content-section">
       <h2>My role</h2>
       <p>
@@ -99,21 +99,19 @@ const outcomes = [
         supported both user needs and business objectives.
       </p>
       <p>
-        My focus was on shaping a system that could scale across markets while maintaining
+        My focus was shaping a system that could scale across markets while maintaining
         clarity, usability, and operational consistency.
       </p>
     </section>
 
-    <!-- HOW I OPERATED -->
     <section class="content-section">
       <h2>How I operated</h2>
       <div class="cards-grid two-up">
-
         <article class="info-card">
           <h3>Reframed the problem</h3>
           <p>
             We moved from improving isolated tools to designing a connected ecosystem
-            that integrated marketplace and financial services into a single platform.
+            that combined marketplace and financial services in one platform.
           </p>
         </article>
 
@@ -128,23 +126,21 @@ const outcomes = [
         <article class="info-card">
           <h3>Aligned global teams</h3>
           <p>
-            I worked across regions and functions to align priorities, ensure consistency,
-            and build a shared understanding of platform direction.
+            I worked across regions and functions to align priorities, ensure
+            consistency, and build shared understanding around platform direction.
           </p>
         </article>
 
         <article class="info-card">
           <h3>Enabled scalable execution</h3>
           <p>
-            We established reusable patterns and systems that allowed faster rollout
+            We established reusable patterns and systems that supported faster rollout
             across countries without redesigning from scratch.
           </p>
         </article>
-
       </div>
     </section>
 
-    <!-- DECISIONS -->
     <section class="content-section">
       <h2>Key decisions</h2>
       <div class="cards-grid one-up">
@@ -157,7 +153,6 @@ const outcomes = [
       </div>
     </section>
 
-    <!-- OUTCOMES -->
     <section class="content-section">
       <h2>Outcomes</h2>
       <div class="outcomes-card">
@@ -169,24 +164,21 @@ const outcomes = [
       </div>
     </section>
 
-    <!-- REFLECTION -->
     <section class="content-section">
       <h2>Reflection</h2>
       <p>
-        This work demonstrates how design can operate at the level of business systems—
-        not just interfaces—connecting marketplace dynamics, financial services, and
-        operational workflows into a cohesive platform that creates real economic impact.
+        This work shows how design can operate at the level of business systems—not
+        just interfaces—connecting marketplace dynamics, financial services, and
+        operational workflows into a cohesive platform with measurable economic impact.
       </p>
     </section>
 
-    <!-- NEXT -->
     <section class="content-section next-step">
       <h2>Next case study</h2>
       <p>
         Continue to <a href="/case-studies/global-servicing-platform">Global Servicing Platform</a>.
       </p>
     </section>
-
   </section>
 </MainLayout>
 
@@ -196,8 +188,15 @@ const outcomes = [
   }
 
   .hero {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
     margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
   }
 
   .eyebrow {
@@ -218,15 +217,31 @@ const outcomes = [
 
   .lead {
     margin-top: 1.2rem;
-    font-size: 1.1rem;
-    line-height: 1.85;
+    font-size: 1.08rem;
+    line-height: 1.8;
     color: #555;
-    max-width: 760px;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
   }
 
   .snapshot-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
     margin-bottom: 3rem;
   }
@@ -244,13 +259,18 @@ const outcomes = [
   }
 
   .snapshot-label {
-    font-size: 0.75rem;
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #777;
   }
 
   .snapshot-value {
-    margin-top: 0.4rem;
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
   }
 
   .content-section {
@@ -259,27 +279,102 @@ const outcomes = [
     border-top: 1px solid var(--divider);
   }
 
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 820px;
+  }
+
   .cards-grid {
     display: grid;
     gap: 1rem;
   }
 
   .cards-grid.two-up {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
   }
 
   .info-card {
     padding: 1.4rem;
   }
 
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0;
+    max-width: none;
+  }
+
   .outcomes-card {
-    padding: 1.4rem;
+    padding: 1.35rem 1.4rem;
+  }
+
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .next-step a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
     .snapshot-grid,
     .cards-grid.two-up {
       grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
     }
   }
 </style>
