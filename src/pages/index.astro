@@ -8,18 +8,30 @@ const impactStats = [
   { value: "300%", label: "User Adoption Growth" },
 ];
 
-const positioning = [
+const systemFraming = [
   {
-    title: "Strategy",
-    text: "Aligning product direction with business goals, market forces, and executive vision.",
+    title: "Narrative",
+    text: "How I operate across strategy, systems, and execution to turn complexity into aligned decisions and forward motion.",
+    href: "/narrative",
+    linkLabel: "See how I operate",
   },
   {
-    title: "Systems",
-    text: "Designing scalable platforms, workflows, and governance models that compound over time.",
+    title: "Case Studies",
+    text: "Proof of execution through enterprise platforms, transformation programs, and measurable business outcomes.",
+    href: "/case-studies",
+    linkLabel: "View case studies",
   },
   {
-    title: "Execution",
-    text: "Translating strategy into shipped products through cross-functional leadership and delivery discipline.",
+    title: "Thinking",
+    text: "A perspective layer on systems, AI, governance, and product design for leaders navigating complexity and change.",
+    href: "/thinking",
+    linkLabel: "Explore thinking",
+  },
+  {
+    title: "Contact",
+    text: "The engagement layer for advisory, leadership, and transformation conversations.",
+    href: "/contact",
+    linkLabel: "Start a conversation",
   },
 ];
 
@@ -30,15 +42,15 @@ const operatingModel = [
   },
   {
     title: "Structure complexity",
-    text: "Turn ambiguity into usable frames, priorities, and decision paths that teams can act on.",
+    text: "Turn ambiguity into usable frames, priorities, and decision paths teams can act on.",
   },
   {
     title: "Align the system",
-    text: "Bring leadership, product, design, engineering, and data into shared understanding and coordinated execution.",
+    text: "Create shared understanding across leadership, product, design, engineering, and data.",
   },
   {
     title: "Drive execution",
-    text: "Move from direction to shipped outcomes with rigor, accountability, and sustainable momentum.",
+    text: "Move from direction to shipped outcomes with rigor, accountability, and momentum.",
   },
 ];
 
@@ -49,7 +61,7 @@ const featuredWork = [
     description:
       "Enterprise-wide digital and AI experience strategy for clinical research.",
     outcome:
-      "Aligned product, data, and research workflows to improve decision-making and accelerate trial execution.",
+      "Aligned product, data, and research workflows to improve decision-making, strengthen operational clarity, and accelerate trial execution.",
     href: "/case-studies/ai-life-sciences-platform",
   },
   {
@@ -58,7 +70,7 @@ const featuredWork = [
     description:
       "Unified marketplace and fintech ecosystem for millions of SMBs across Latin America.",
     outcome:
-      "Consolidated fragmented tools into a scalable platform, enabling new revenue streams and operational efficiency at regional scale.",
+      "Consolidated fragmented tools into a scalable platform that unlocked new revenue opportunities and improved operational efficiency at regional scale.",
     href: "/case-studies/smb-marketplace-fintech",
   },
 ];
@@ -68,20 +80,27 @@ const thinkingHighlights = [
     title: "Designing Through Change: From Pages to Platforms to Intelligence",
     description:
       "A three-part series on how product design evolves from static interfaces to systems, platforms, and intelligent experiences.",
-    href: "/thinking",
+    href: "/thinking/designing-through-change",
   },
   {
     title: "Measuring What Matters: Tying Design Decisions to Business KPIs",
     description:
       "How to connect design choices to growth, efficiency, and measurable business outcomes.",
-    href: "/thinking",
+    href: "/thinking/measuring-what-matters",
   },
   {
     title: "Building a Governed Product System",
     description:
       "Why durable digital products require governance, observability, and system-level decision frameworks.",
-    href: "/thinking",
+    href: "/thinking/governed-product-system",
   },
+];
+
+const advisoryOffers = [
+  "Interim Design Leadership",
+  "AI Transformation Strategy",
+  "Design System Modernization",
+  "Organizational Design & Hiring",
 ];
 
 const credibility = [
@@ -92,7 +111,10 @@ const credibility = [
 ];
 ---
 
-<MainLayout title="Jorge Obando | Director of Product Design">
+<MainLayout
+  title="Jorge Obando | Director of Product Design"
+  description="Jorge Obando is a Director of Product Design focused on enterprise platforms, systems thinking, AI integration, and measurable business impact."
+>
   <section class="home-page">
     <section class="hero">
       <div class="hero-copy">
@@ -103,15 +125,13 @@ const credibility = [
           enterprise platforms that deliver measurable business impact.
         </p>
         <p class="supporting">
-          I lead design as a strategic function, not a service—aligning product, engineering, data,
-          and executive vision to deliver scalable, AI-enhanced platforms. My work focuses on
-          transforming complex business challenges into governed systems that drive adoption,
-          efficiency, and long-term value.
+          I align product, engineering, data, and executive vision to turn complex business challenges
+          into scalable, AI-enhanced platforms.
         </p>
 
         <div class="hero-actions">
           <a class="button button-primary" href="/case-studies">View Case Studies</a>
-          <a class="button button-secondary" href="/resume">Download Resume</a>
+          <a class="button button-secondary" href="/resume">View Resume</a>
         </div>
       </div>
 
@@ -139,17 +159,22 @@ const credibility = [
       </p>
     </section>
 
-    <section class="content-section" aria-labelledby="positioning-title">
+    <section class="content-section" aria-labelledby="system-framing-title">
       <div class="section-heading">
-        <p class="section-label">Positioning</p>
-        <h2 id="positioning-title">I operate at the intersection of:</h2>
+        <p class="section-label">System Framing</p>
+        <h2 id="system-framing-title">How I work across systems</h2>
+        <p class="section-intro">
+          This portfolio is structured to make the system legible quickly: how I operate, what I have
+          built, how I think, and how to engage.
+        </p>
       </div>
 
-      <div class="cards-grid three-up">
-        {positioning.map((item) => (
+      <div class="cards-grid two-up">
+        {systemFraming.map((item) => (
           <article class="card">
             <h3>{item.title}</h3>
             <p>{item.text}</p>
+            <a class="card-link" href={item.href}>{item.linkLabel}</a>
           </article>
         ))}
       </div>
@@ -158,9 +183,10 @@ const credibility = [
     <section class="content-section" aria-labelledby="operating-model-title">
       <div class="section-heading">
         <p class="section-label">Operating Model</p>
-        <h2 id="operating-model-title">How I operate</h2>
+        <h2 id="operating-model-title">A structured approach to complex transformation</h2>
         <p class="section-intro">
-          A structured approach to turning complexity into aligned execution and measurable business outcomes.
+          I help teams move from ambiguity to aligned execution through a repeatable model built for
+          enterprise scale.
         </p>
       </div>
 
@@ -180,10 +206,11 @@ const credibility = [
 
     <section class="content-section" aria-labelledby="featured-work-title">
       <div class="section-heading">
-        <p class="section-label">Selected Work</p>
-        <h2 id="featured-work-title">Enterprise transformations</h2>
+        <p class="section-label">Case Studies</p>
+        <h2 id="featured-work-title">Proof through enterprise transformation</h2>
         <p class="section-intro">
-          See how strategy, systems, and AI show up in real platforms, workflows, and business outcomes.
+          Real examples of strategy, systems, and AI translated into platform change, operational
+          improvement, and measurable outcomes.
         </p>
       </div>
 
@@ -199,17 +226,19 @@ const credibility = [
         ))}
       </div>
 
-      <p class="section-link">
+      <p class="section-link-group">
         <a href="/case-studies">View all work</a>
+        <a href="/thinking">See related thinking</a>
       </p>
     </section>
 
     <section class="content-section" aria-labelledby="thinking-layer-title">
       <div class="section-heading">
         <p class="section-label">Thinking</p>
-        <h2 id="thinking-layer-title">Perspective on systems, AI, and product strategy</h2>
+        <h2 id="thinking-layer-title">How I think about systems, AI, and product</h2>
         <p class="section-intro">
-          A curated knowledge layer on designing complex systems, integrating AI, and tying product decisions to business outcomes.
+          A core intellectual layer focused on designing governed systems, integrating AI responsibly,
+          and connecting product decisions to business performance.
         </p>
       </div>
 
@@ -223,55 +252,33 @@ const credibility = [
         ))}
       </div>
 
-      <p class="section-link">
+      <p class="section-link-group">
         <a href="/thinking">Explore Thinking</a>
+        <a href="/case-studies">See the work behind it</a>
       </p>
     </section>
 
     <section class="content-section" aria-labelledby="advisory-title">
       <div class="section-heading">
         <p class="section-label">Advisory</p>
-        <h2 id="advisory-title">Design leadership at scale</h2>
+        <h2 id="advisory-title">Strategic design leadership for critical moments</h2>
         <p class="section-intro">
-          Fractional and advisory design leadership to accelerate platform transformation, AI integration, and organizational scale.
+          Advisory and fractional leadership for organizations navigating platform transformation,
+          AI integration, and operating model change.
         </p>
       </div>
 
       <div class="advisory-panel">
         <p class="advisory-copy">
-          I partner with organizations to lead critical design initiatives without the overhead of
-          full-time leadership—aligning strategy, systems, and execution to deliver measurable
-          business outcomes.
+          I partner with organizations that need senior design leadership, system clarity, and
+          execution momentum.
         </p>
 
         <ul class="engagement-list">
-          <li>Interim Design Leadership</li>
-          <li>AI Transformation Strategy</li>
-          <li>Design System Modernization</li>
-          <li>Organizational Design &amp; Hiring</li>
+          {advisoryOffers.map((item) => (
+            <li>{item}</li>
+          ))}
         </ul>
-
-        <div class="cards-grid two-up advisory-grid">
-          <article>
-            <h3>Strategic Leadership</h3>
-            <p>C-suite alignment and cross-functional orchestration.</p>
-          </article>
-
-          <article>
-            <h3>AI Integration</h3>
-            <p>Ethical frameworks, predictive systems, and governance.</p>
-          </article>
-
-          <article>
-            <h3>Business Impact</h3>
-            <p>KPI-driven outcomes and measurable performance.</p>
-          </article>
-
-          <article>
-            <h3>Team Building</h3>
-            <p>Scaling global teams, culture, and capability.</p>
-          </article>
-        </div>
 
         <a class="button button-primary" href="/contact">Discuss an Engagement</a>
       </div>
@@ -466,7 +473,6 @@ const credibility = [
     .proof-note,
     .feature-card p,
     .card p,
-    .advisory-grid p,
     .logo-cloud span,
     .card-link {
       margin: 0;
@@ -484,8 +490,7 @@ const credibility = [
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .cards-grid.two-up,
-    .advisory-grid {
+    .cards-grid.two-up {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -499,8 +504,7 @@ const credibility = [
     }
 
     .card h3,
-    .feature-card h3,
-    .advisory-grid h3 {
+    .feature-card h3 {
       margin: 0 0 0.65rem;
       font-size: 1.2rem;
       line-height: 1.25;
@@ -526,7 +530,8 @@ const credibility = [
 
     .feature-card a,
     .section-link a,
-    .card-link {
+    .card-link,
+    .section-link-group a {
       display: inline-block;
       margin-top: 1rem;
       font-size: 0.95rem;
@@ -539,17 +544,19 @@ const credibility = [
       margin-top: 1rem;
     }
 
+    .section-link-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      margin-top: 1rem;
+    }
+
     .engagement-list {
       margin: 1rem 0 1.6rem;
       padding-left: 1.2rem;
       color: #444;
       font-size: 0.98rem;
       line-height: 1.8;
-    }
-
-    .advisory-grid {
-      margin-bottom: 1.5rem;
-      gap: 1rem;
     }
 
     .logo-cloud {
@@ -637,6 +644,11 @@ const credibility = [
       .cta-band {
         border-radius: 24px;
         padding: 2.25rem 1.5rem;
+      }
+
+      .section-link-group {
+        flex-direction: column;
+        gap: 0.35rem;
       }
     }
   </style>

@@ -23,9 +23,11 @@ const articles = [
 ];
 ---
 
-<MainLayout title="Thinking | Jorge Obando">
+<MainLayout
+  title="Thinking | Jorge Obando"
+  description="Thinking by Jorge Obando on systems design, enterprise product strategy, AI integration, governance, and measurable business impact."
+>
   <section class="thinking-page">
-
     <section class="hero">
       <p class="eyebrow">Thinking</p>
       <h1>Perspectives on systems, product, and AI</h1>
@@ -33,9 +35,14 @@ const articles = [
         Writing that explores how complex systems are designed, scaled, and governed—
         across enterprise platforms, AI, and product ecosystems.
       </p>
+
+      <p class="hero-links">
+        <a href="/case-studies">See related case studies</a>
+        <a href="/narrative">See how I operate</a>
+      </p>
     </section>
 
-    <section class="articles">
+    <section class="articles" aria-label="Thinking articles">
       {articles.map((article) => (
         <article class="article-card">
           <a href={article.href}>
@@ -45,7 +52,6 @@ const articles = [
         </article>
       ))}
     </section>
-
   </section>
 </MainLayout>
 
@@ -81,6 +87,20 @@ const articles = [
     line-height: 1.85;
     color: #555;
     max-width: 760px;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin: 1.2rem 0 0;
+  }
+
+  .hero-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
   }
 
   .articles {
@@ -129,6 +149,11 @@ const articles = [
     .lead {
       font-size: 1.02rem;
       line-height: 1.8;
+    }
+
+    .hero-links {
+      flex-direction: column;
+      gap: 0.35rem;
     }
   }
 </style>

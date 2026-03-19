@@ -2,7 +2,40 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Measuring What Matters | Jorge Obando">
+<MainLayout
+  title="Measuring What Matters | Jorge Obando"
+  description="Measuring What Matters by Jorge Obando explores how design connects to business KPIs, turning product decisions into measurable outcomes across growth, efficiency, and risk."
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Measuring What Matters: Tying Design Decisions to Business KPIs",
+        description:
+          "How design connects directly to business KPIs and turns product decisions into measurable impact.",
+        author: {
+          "@type": "Person",
+          name: "Jorge R. Obando",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Jorge Obando",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://jorgeobando.com/images/og-default.jpg",
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": "https://jorgeobando.com/thinking/measuring-what-matters",
+        },
+        image: "https://jorgeobando.com/images/measuring-what-matters.jpg",
+      })}
+    </script>
+  </Fragment>
+
   <section class="article-page">
     <section class="hero">
       <p class="eyebrow">Thinking</p>
@@ -15,7 +48,10 @@ import MainLayout from "../../layouts/MainLayout.astro";
     </section>
 
     <figure class="hero-image">
-      <img src="/images/measuring-what-matters.jpg" alt="Conceptual illustration of design decisions connecting to business performance and measurable outcomes" />
+      <img
+        src="/images/measuring-what-matters.jpg"
+        alt="Conceptual illustration of design decisions connecting to business performance and measurable outcomes"
+      />
     </figure>
 
     <section class="content">
@@ -215,6 +251,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         That is when design stops being support and starts becoming strategy.
       </p>
     </section>
+
+    <section class="article-links" aria-label="Related navigation">
+      <a href="/thinking">Back to Thinking</a>
+      <a href="/case-studies">See related case studies</a>
+      <a href="/narrative">See how I operate</a>
+    </section>
   </section>
 </MainLayout>
 
@@ -294,9 +336,31 @@ import MainLayout from "../../layouts/MainLayout.astro";
     color: #111;
   }
 
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
   @media (max-width: 768px) {
     .article-page {
       padding: 1.5rem 0 4rem;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
     }
   }
 </style>

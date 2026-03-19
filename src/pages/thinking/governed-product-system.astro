@@ -2,10 +2,41 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Governed Product System | Jorge Obando">
-  <section class="article-page">
+<MainLayout
+  title="Governed Product System | Jorge Obando"
+  description="Building a Governed Product System by Jorge Obando explores why real product systems require governance, observability, disciplined design systems, and reliable AI-enabled foundations."
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Building a Governed Product System: From Design Systems to Observability",
+        description:
+          "Why real product systems require governance, observability, disciplined design systems, and reliable AI-enabled foundations.",
+        author: {
+          "@type": "Person",
+          name: "Jorge R. Obando",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Jorge Obando",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://jorgeobando.com/images/og-default.jpg",
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": "https://jorgeobando.com/thinking/governed-product-system",
+        },
+        image: "https://jorgeobando.com/images/governed-product-system.jpg",
+      })}
+    </script>
+  </Fragment>
 
-    <!-- HERO -->
+  <section class="article-page">
     <section class="hero">
       <p class="eyebrow">Thinking</p>
       <h1>Building a Governed Product System: From Design Systems to Observability</h1>
@@ -15,14 +46,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
       </p>
     </section>
 
-    <!-- HERO IMAGE -->
     <figure class="hero-image">
-      <img src="/images/governed-product-system.jpg" alt="Illustration of governed product systems, observability, and intelligent interfaces" />
+      <img
+        src="/images/governed-product-system.jpg"
+        alt="Illustration of governed product systems, observability, and intelligent interfaces"
+      />
     </figure>
 
-    <!-- CONTENT -->
     <section class="content">
-
       <h2>Introduction</h2>
 
       <p>
@@ -162,9 +193,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
       <p class="highlight">
         A Governed Product System is not built quickly. It is built correctly.
       </p>
-
     </section>
-
   </section>
 </MainLayout>
 

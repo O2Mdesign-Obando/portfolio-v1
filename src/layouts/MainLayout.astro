@@ -1,6 +1,15 @@
 ---
-const { title = "Jorge Obando" } = Astro.props;
+const {
+  title = "Jorge Obando",
+  description = "Jorge Obando — Product Design leader specializing in enterprise platforms, systems thinking, and AI-enabled product strategy.",
+  ogType = "website",
+  ogImage = "/images/og-default.jpg",
+} = Astro.props;
+
 const pathname = Astro.url.pathname;
+const siteUrl = "https://jorgeobando.com";
+const canonicalUrl = new URL(pathname, siteUrl).toString();
+const resolvedOgImage = new URL(ogImage, siteUrl).toString();
 
 const isActive = (href: string) => {
   if (href === "/") return pathname === "/";
@@ -10,26 +19,57 @@ const isActive = (href: string) => {
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title}</title>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
 
-    <meta
-      name="description"
-      content="Jorge Obando — Product Design Leader specializing in intelligent systems, platform strategy, and AI-native experiences."
-    />
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={resolvedOgImage} />
+  <meta property="og:site_name" content="Jorge Obando" />
+  <meta property="og:locale" content="en_US" />
 
-    <meta property="og:title" content={title} />
-    <meta
-      property="og:description"
-      content="Product Design Leader focused on systems, platforms, and AI-native experiences."
-    />
-    <meta property="og:type" content="website" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={resolvedOgImage} />
 
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jorge R. Obando",
+      "jobTitle": "Director of Product Design",
+      "description": "Product Design leader specializing in enterprise platforms, systems thinking, and AI-enabled product strategy.",
+      "url": "https://jorgeobando.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/jorgerobando/"
+      ]
+    }
+  </script>
 
-    <style is:global>
+  <!-- Structured Data: Website -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Jorge Obando Portfolio",
+      "url": "https://jorgeobando.com",
+      "description": "Portfolio of Jorge Obando, Director of Product Design focused on enterprise systems, AI integration, and measurable business outcomes."
+    }
+  </script>
+
+  <slot name="head" />
+
+  <style is:global>
       :root {
         --text-primary: #111111;
         --text-secondary: #555555;
