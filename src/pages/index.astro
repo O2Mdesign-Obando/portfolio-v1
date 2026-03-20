@@ -75,26 +75,12 @@ const featuredWork = [
   },
 ];
 
-const thinkingHighlights = [
-  {
-    title: "Designing Through Change: From Pages to Platforms to Intelligence",
-    description:
-      "A three-part series on how product design evolves from static interfaces to systems, platforms, and intelligent experiences.",
-    href: "/thinking/designing-through-change",
-  },
-  {
-    title: "Measuring What Matters: Tying Design Decisions to Business KPIs",
-    description:
-      "How to connect design choices to growth, efficiency, and measurable business outcomes.",
-    href: "/thinking/measuring-what-matters",
-  },
-  {
-    title: "Building a Governed Product System",
-    description:
-      "Why durable digital products require governance, observability, and system-level decision frameworks.",
-    href: "/thinking/governed-product-system",
-  },
-];
+const featuredThinkingArticle = {
+  title: "Designing Through Change: From Pages to Platforms to Intelligence",
+  description:
+    "A perspective on how digital design evolves from static interfaces to platforms, systems, and intelligent products—and what that shift demands from leaders building for complexity.",
+  href: "/thinking/designing-through-change",
+};
 
 const advisoryOffers = [
   "Interim Design Leadership",
@@ -174,7 +160,7 @@ const credibility = [
           <article class="card">
             <h3>{item.title}</h3>
             <p>{item.text}</p>
-            <a class="card-link" href={item.href}>{item.linkLabel}</a>
+            <a class="editorial-link" href={item.href}>{item.linkLabel}</a>
           </article>
         ))}
       </div>
@@ -200,7 +186,7 @@ const credibility = [
       </div>
 
       <p class="section-link">
-        <a href="/narrative">See how I operate</a>
+        <a class="editorial-link" href="/narrative">See how I operate</a>
       </p>
     </section>
 
@@ -221,40 +207,37 @@ const credibility = [
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <p class="feature-outcome">{item.outcome}</p>
-            <a href={item.href}>View Case Study</a>
+            <a class="editorial-link" href={item.href}>View Case Study</a>
           </article>
         ))}
       </div>
 
       <p class="section-link-group">
-        <a href="/case-studies">View all work</a>
-        <a href="/thinking">See related thinking</a>
+        <a class="editorial-link" href="/case-studies">View all work</a>
+        <a class="editorial-link" href="/thinking">See related thinking</a>
       </p>
     </section>
 
     <section class="content-section" aria-labelledby="thinking-layer-title">
       <div class="section-heading">
         <p class="section-label">Thinking</p>
-        <h2 id="thinking-layer-title">How I think about systems, AI, and product</h2>
+        <h2 id="thinking-layer-title">A perspective layer on systems, AI, and product</h2>
         <p class="section-intro">
-          A core intellectual layer focused on designing governed systems, integrating AI responsibly,
-          and connecting product decisions to business performance.
+          Writing that extends the portfolio’s point of view into design leadership, platform thinking,
+          governance, and intelligent systems.
         </p>
       </div>
 
-      <div class="cards-grid three-up">
-        {thinkingHighlights.map((item) => (
-          <article class="card">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <a class="card-link" href={item.href}>Read Article</a>
-          </article>
-        ))}
-      </div>
+      <article class="feature-card thinking-feature">
+        <p class="feature-kicker">Featured Article</p>
+        <h3>{featuredThinkingArticle.title}</h3>
+        <p>{featuredThinkingArticle.description}</p>
+        <a class="editorial-link" href={featuredThinkingArticle.href}>Read Article</a>
+      </article>
 
       <p class="section-link-group">
-        <a href="/thinking">Explore Thinking</a>
-        <a href="/case-studies">See the work behind it</a>
+        <a class="editorial-link" href="/thinking">Explore Thinking</a>
+        <a class="editorial-link" href="/case-studies">See the work behind it</a>
       </p>
     </section>
 
@@ -473,8 +456,7 @@ const credibility = [
     .proof-note,
     .feature-card p,
     .card p,
-    .logo-cloud span,
-    .card-link {
+    .logo-cloud span {
       margin: 0;
       font-size: 0.98rem;
       line-height: 1.65;
@@ -484,10 +466,6 @@ const credibility = [
     .proof-note {
       margin-top: 1.2rem;
       max-width: 60ch;
-    }
-
-    .cards-grid.three-up {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .cards-grid.two-up {
@@ -528,16 +506,23 @@ const credibility = [
       margin-top: 0.75rem;
     }
 
-    .feature-card a,
+    .thinking-feature {
+      max-width: 760px;
+    }
+
+    .editorial-link,
     .section-link a,
-    .card-link,
     .section-link-group a {
       display: inline-block;
-      margin-top: 1rem;
       font-size: 0.95rem;
       font-weight: 600;
       color: #111;
       text-decoration: none;
+    }
+
+    .feature-card .editorial-link,
+    .card .editorial-link {
+      margin-top: 1rem;
     }
 
     .section-link {
@@ -610,7 +595,6 @@ const credibility = [
       }
 
       .proof-grid,
-      .cards-grid.three-up,
       .logo-cloud {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -622,7 +606,6 @@ const credibility = [
       }
 
       .proof-grid,
-      .cards-grid.three-up,
       .cards-grid.two-up,
       .logo-cloud {
         grid-template-columns: 1fr;

@@ -65,7 +65,9 @@ const helpWith = [
             <div class="contact-item">
               <p class="contact-label">Intch</p>
               <p class="contact-value">
-                <a href="https://intch.org/p/19675033" aria-disabled="true">View my profile</a>
+                <a href="https://intch.org/p/19675033" target="_blank" rel="noopener noreferrer">
+                  View my profile
+                </a>
               </p>
             </div>
 
@@ -225,9 +227,11 @@ const helpWith = [
 
   .contact-value a,
   .snapshot-value a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
   }
 
   .content-section {
