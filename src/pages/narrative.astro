@@ -213,22 +213,32 @@ const leverageAreas = [
         </p>
       </div>
     </section>
-<section class="content-section">
-  <div class="section-heading">
-    <p class="section-kicker">Closing perspective</p>
-    <h2>This is how I operate</h2>
-  </div>
-  <div class="section-copy">
-    <p>
-      This is not a process I apply mechanically. It is how I think, how I make decisions,
-      and how I help organizations move from ambiguity to execution.
-    </p>
-    <p>
-      The work itself—products, platforms, and systems—is where this operating model
-      becomes visible.
-    </p>
-  </div>
-</section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-kicker">Closing perspective</p>
+        <h2>This is how I operate</h2>
+      </div>
+      <div class="section-copy">
+        <p>
+          This is not a process I apply mechanically. It is how I think, how I make decisions,
+          and how I help organizations move from ambiguity to execution.
+        </p>
+        <p>
+          The work itself—products, platforms, and systems—is where this operating model
+          becomes visible.
+        </p>
+      </div>
+
+      <section class="article-links" aria-label="Related narrative navigation">
+        <a href="/case-studies/ai-life-sciences-platform">
+          See this operating model in AI-powered platform design
+        </a>
+        <a href="/thinking/designing-through-change">
+          Read how this perspective extends into systems thinking
+        </a>
+      </section>
+    </section>
   </section>
 </MainLayout>
 
@@ -382,6 +392,23 @@ const leverageAreas = [
     padding-bottom: 0;
   }
 
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
   @media (max-width: 960px) {
     .stats-grid,
     .cards-grid.four-up,
@@ -415,6 +442,11 @@ const leverageAreas = [
     .content-section {
       padding-top: 2.25rem;
       margin-top: 2.25rem;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
     }
   }
 </style>

@@ -173,11 +173,19 @@ const outcomes = [
       </p>
     </section>
 
-    <section class="content-section next-step">
-      <h2>Next case study</h2>
-      <p>
-        Continue to <a href="/case-studies/global-servicing-platform">Global Servicing Platform</a>.
-      </p>
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/measuring-what-matters">
+          Why measuring outcomes—not outputs—changes execution
+        </a>
+        <a href="/thinking/designing-through-change">
+          How I design systems that can adapt under real-world complexity
+        </a>
+        <a href="/case-studies/global-servicing-platform">
+          Continue to Global Servicing Platform
+        </a>
+      </section>
     </section>
   </section>
 </MainLayout>
@@ -341,10 +349,21 @@ const outcomes = [
     margin-bottom: 0;
   }
 
-  .next-step a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
   }
 
   @media (max-width: 960px) {
@@ -375,6 +394,11 @@ const outcomes = [
 
     .hero-image img {
       min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
     }
   }
 </style>

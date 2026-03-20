@@ -167,11 +167,19 @@ const outcomes = [
       </p>
     </section>
 
-    <section class="content-section next-step">
-      <h2>Next case study</h2>
-      <p>
-        Return to <a href="/case-studies">all case studies</a>.
-      </p>
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/measuring-what-matters">
+          Why measuring outcomes—not outputs—changes how systems improve
+        </a>
+        <a href="/thinking/governed-product-system">
+          Designing governed product systems for scale, consistency, and alignment
+        </a>
+        <a href="/case-studies">
+          Return to all case studies
+        </a>
+      </section>
     </section>
   </section>
 </MainLayout>
@@ -335,10 +343,21 @@ const outcomes = [
     margin-bottom: 0;
   }
 
-  .next-step a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
   }
 
   @media (max-width: 960px) {
@@ -369,6 +388,11 @@ const outcomes = [
 
     .hero-image img {
       min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
     }
   }
 </style>
