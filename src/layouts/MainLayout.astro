@@ -1,3 +1,4 @@
+
 ---
 const {
   title = "Jorge Obando",
@@ -40,6 +41,16 @@ const isActive = (href: string) => {
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={resolvedOgImage} />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K4CEN7LNQC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K4CEN7LNQC');
+  </script>
 
   <!-- Structured Data: Person -->
   <script type="application/ld+json">
