@@ -1,5 +1,7 @@
 
 ---
+import Analytics from "@vercel/analytics/astro";
+
 const {
   title = "Jorge Obando",
   description = "Jorge Obando — Product Design leader specializing in enterprise platforms, systems thinking, and AI-enabled product strategy.",
@@ -51,6 +53,9 @@ const isActive = (href: string) => {
 
     gtag('config', 'G-K4CEN7LNQC');
   </script>
+  
+   <!-- Vercel Analytics --> 
+  <Analytics mode="production" />
 
   <!-- Structured Data: Person -->
   <script type="application/ld+json">
