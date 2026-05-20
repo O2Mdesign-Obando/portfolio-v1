@@ -52,6 +52,12 @@ const articles = [
         </article>
       ))}
     </section>
+    
+    <p class="archive-link">
+      <a href="https://www.o2mdesign.com/thinking" target="_blank" rel="noopener noreferrer">
+        Explore the full thinking archive on O2M Design →
+      </a>
+    </p>
   </section>
 </MainLayout>
 
@@ -155,5 +161,19 @@ const articles = [
       flex-direction: column;
       gap: 0.35rem;
     }
+  }
+    .archive-link {
+    margin-top: 2rem;
+  }
+
+  .archive-link a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .archive-link a:hover {
+    text-decoration: underline;
   }
 </style>
