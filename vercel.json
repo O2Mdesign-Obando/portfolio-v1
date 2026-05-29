@@ -1,0 +1,40 @@
+{
+  "redirects": [
+    {
+      "source": "/Home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Process",
+ 
+     "destination": "/thinking",
+      "permanent": true
+    },
+    {
+      "source": "/NorthStarVision",
+      "destination": "/thinking",
+      "permanent": true
+    },
+    {
+      "source": "/HowThisSystemWasBuilt",
+      "destination": "/thinking",
+      "permanent": true
+    },
+    {
+      "source": "/DesignSystemRegistry",
+      "destination": "/thinking",
+      "permanent": true
+    },
+    {
+      "source": "/SystemRegistry",
+      "destination": "/thinking",
+      "permanent": true
+    },
+    {
+      "source": "/CaseStudyDetail",
+      "destination": "/case-studies",
+      "permanent": true
+    }
+  ]
+}
