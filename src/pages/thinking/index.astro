@@ -1,7 +1,28 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
-const articles = [
+const portfolioArticles = [
+  {
+    title: "Designing Through Change",
+    href: "/thinking/designing-through-change",
+    description:
+      "The evolution of digital design—from pages to platforms to intelligent systems—and how it changes how we build products.",
+  },
+  {
+    title: "Measuring What Matters",
+    href: "/thinking/measuring-what-matters",
+    description:
+      "Why design must connect directly to business KPIs—and how to turn design decisions into measurable impact.",
+  },
+  {
+    title: "Governed Product System",
+    href: "/thinking/governed-product-system",
+    description:
+      "Why real product systems require governance, observability, and discipline—and how to design for evolution without drift.",
+  },
+];
+
+const o2mArticles = [
   {
     title: "The Problem With Systems That Forget",
     date: "June 11, 2026",
@@ -54,12 +75,23 @@ const articles = [
       </p>
     </section>
 
+    <section class="articles" aria-label="Thinking articles">
+      {portfolioArticles.map((article) => (
+        <article class="article-card">
+          <a href={article.href}>
+            <h2>{article.title}</h2>
+            <p>{article.description}</p>
+          </a>
+        </article>
+      ))}
+    </section>
+
     <section class="articles-section" aria-labelledby="latest-writing-title">
       <p class="section-label">Latest writing from O2M Design</p>
       <h2 id="latest-writing-title">Proof of reasoning</h2>
 
       <div class="articles" aria-label="O2M thinking articles">
-      {articles.map((article) => (
+      {o2mArticles.map((article) => (
         <article class="article-card">
           <a href={article.href} target="_blank" rel="noopener noreferrer">
             <p class="article-meta">{article.date} · {article.category}</p>
