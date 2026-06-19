@@ -1,0 +1,602 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Client / Program", value: "Medidata" },
+  { label: "Role", value: "Sr. UX/UI Consultant" },
+  { label: "Product", value: "Enterprise SaaS / B2B Platform" },
+  { label: "Industry", value: "Healthcare / Life Sciences" },
+  { label: "Scale", value: "10-person cross-functional team" },
+];
+
+const methodology = [
+  "Frame - Align and define",
+  "Discover - Research and empathize",
+  "Structure - Information architecture",
+  "Ideate - Explore concepts",
+  "Interact - Optimize flows",
+  "Design - Visual and systems",
+  "Validate - Test and reduce risk",
+  "Launch - Build and QA",
+  "Improve - Measure and learn",
+];
+
+const deliverables = [
+  "Unified workflows across Medidata products",
+  "Data-rich, intuitive dashboards",
+  "Material Design-based UI system",
+  "Responsive enterprise platform",
+  "Seamless product integration concepts",
+  "Streamlined study management tools",
+];
+
+const methods = [
+  "Sketch",
+  "InVision",
+  "Material Design principles",
+  "Wireframing",
+  "Interactive prototyping",
+  "Usability testing",
+  "Enterprise SaaS workflow design",
+];
+
+const outcomes = [
+  "Supported faster and clearer study setup workflows",
+  "Reduced training friction through a more intuitive platform experience",
+  "Improved overall platform usability",
+  "Enhanced data visualization and comprehension",
+  "Unified experience across the product suite",
+  "Increased efficiency in clinical trial management workflows",
+];
+
+const workedWell = [
+  "Unified workflows improved efficiency for users managing clinical trial tasks.",
+  "Intuitive dashboards improved data visibility and comprehension.",
+  "Material Design principles supported a modern, responsive UI direction.",
+];
+
+const improvements = [
+  "Further exploration of accessibility considerations would have strengthened the platform experience.",
+  "Broader testing scenarios across additional user personas would have provided a more complete view of clinical trial workflows.",
+];
+
+const takeaways = [
+  "Early user involvement is critical for identifying clinical workflow needs and pain points.",
+  "Iterative design and testing create flexibility when solving complex enterprise workflow problems.",
+  "Cohesive information architecture significantly improves the usability of data-rich enterprise platforms.",
+];
+---
+
+<MainLayout
+  title="Next-Generation Clinical Trial Platform | Jorge Obando"
+  description="Medidata case study by Jorge Obando, covering clinical trial platform design, enterprise SaaS workflow design, information architecture, dashboards, and product experience alignment."
+  ogImage="/images/medidata-clinical-trial-platform-case-study.png"
+>
+  <section class="case-study-page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Medidata</p>
+        <h1>Next-Generation Clinical Trial Platform</h1>
+        <p class="lead">
+          A next-generation clinical trial platform designed to unify fragmented
+          workflows, improve study management usability, and support more efficient
+          clinical trial operations.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/images/medidata-clinical-trial-platform-case-study.png"
+          alt="Medidata next-generation clinical trial platform interface screenshot"
+        />
+      </figure>
+    </section>
+
+    <section class="snapshot-grid" aria-label="Case study snapshot">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        Medidata faced a significant challenge in the clinical trial space: fragmented
+        tools, complex data workflows, and inconsistent user experiences made study
+        management harder for clinical trial professionals.
+      </p>
+      <p>
+        As Sr. UX/UI Consultant, Jorge supported the design of a next-generation
+        clinical trial platform focused on unifying workflows, improving usability,
+        and creating a more cohesive enterprise SaaS experience.
+      </p>
+      <p>
+        Clinical trials require complex study management from design through
+        submission. The objective was to create a more unified, usable, and efficient
+        platform experience that could reduce fragmentation across tools and support
+        clinical trial professionals through clearer workflows, dashboards, and product
+        integration.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>The real problem</h2>
+      <p>
+        Clinical trials are a critical component of the healthcare industry, requiring
+        teams to manage studies from design through submission.
+      </p>
+      <p>
+        Professionals in this space faced significant hurdles from a fragmented suite
+        of tools. These tools often involved complex data workflows, inconsistent user
+        experiences, steep learning curves, and disconnected interfaces.
+      </p>
+      <p>
+        The result was operational friction during critical study phases. Users needed
+        a more integrated platform that could reduce cognitive load, improve data
+        visibility, and support clinical trial workflows more effectively.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Role and leadership</h2>
+      <p>
+        As Sr. UX/UI Consultant, Jorge worked across UX design, product management,
+        and engineering to support the design of a next-generation clinical trial
+        platform.
+      </p>
+      <p>
+        His responsibilities included UX strategy, interface design, stakeholder
+        alignment, user research support, workflow analysis, prototyping, and
+        collaboration with product and engineering teams.
+      </p>
+      <p>
+        The role required translating complex clinical trial workflows into clearer
+        interaction models and helping align design outputs with product and
+        operational goals.
+      </p>
+      <p>
+        The work involved a 10-person cross-functional team spanning UX design,
+        product management, and engineering. Collaboration was primarily on-site and
+        colocated, allowing close partnership with product and technical stakeholders
+        throughout research, design, prototyping, and validation.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Methodology</h2>
+      <p>
+        The work followed a research-led, structure-first design process with
+        continuous validation. The approach emphasized research over opinion,
+        structure before surface, and continuous usability validation.
+      </p>
+      <div class="cards-grid three-up">
+        {methodology.map((item) => (
+          <article class="info-card compact-card">
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Key deliverables</h2>
+      <div class="outcomes-card">
+        <ul>
+          {deliverables.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Design process</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>Research and discovery</h3>
+          <p>
+            The team adopted a mixed-methods research approach that included user
+            interviews, contextual inquiry, and usability testing.
+          </p>
+          <p>
+            The goal was to understand the pain points and workflows of clinical trial
+            professionals. Key insights revealed that users often relied on disparate
+            systems to complete their tasks, creating opportunities for errors,
+            redundancies, and workflow delays.
+          </p>
+          <p>
+            Users expressed a need for a more integrated platform that could
+            streamline processes and provide a cohesive experience across study
+            management activities.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Information architecture</h3>
+          <p>
+            The information architecture strategy focused on creating a logical flow
+            aligned with user workflows and critical clinical trial phases.
+          </p>
+          <p>
+            The team used activities such as card sorting and affinity mapping to
+            inform taxonomy and organization.
+          </p>
+          <p>
+            Design decisions prioritized critical tasks and workflows, leading toward
+            unified dashboard concepts that presented relevant data at a glance and
+            improved navigation across the platform.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Prototyping and testing</h3>
+          <p>
+            The team used rapid prototyping methods, including wireframes and
+            interactive prototypes developed in tools such as Sketch and InVision.
+          </p>
+          <p>
+            Testing included multiple rounds of usability testing with users from the
+            clinical trial domain.
+          </p>
+          <p>
+            This helped assess user interactions with the platform, identify usability
+            issues early, and improve designs through direct feedback.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Iterations and refinements</h3>
+          <p>
+            The design process included multiple iterations based on user testing and
+            stakeholder review.
+          </p>
+          <p>
+            Early prototypes highlighted areas of confusion, particularly around
+            navigation, data access, and workflow clarity.
+          </p>
+          <p>
+            Based on this feedback, the interface was refined to reduce cognitive
+            load, improve hierarchy, and create a more streamlined user experience.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Technologies and methods</h2>
+      <div class="tag-list" aria-label="Technologies and methods">
+        {methods.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <p>
+        The design work supported key business objectives around reducing workflow
+        fragmentation, improving platform usability, and helping clinical trial teams
+        move through study management tasks with greater clarity.
+      </p>
+      <p>
+        By streamlining workflows, improving dashboard comprehension, and creating a
+        more unified platform experience, the initiative contributed to stronger
+        usability, better product consistency, and more efficient clinical trial
+        management workflows.
+      </p>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>What worked well</h3>
+          <ul>
+            {workedWell.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Areas for improvement</h3>
+          <ul>
+            {improvements.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Key takeaways</h3>
+          <ul>
+            {takeaways.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Why this matters</h2>
+      <p>
+        Clinical trial platforms depend on clarity, workflow integration, and trusted
+        data-rich experiences. In environments where teams manage complex studies
+        across critical phases, strong information architecture and cohesive product
+        systems help make work easier to understand and easier to act on.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/governed-product-system">
+          Designing governed product systems for scale and alignment
+        </a>
+        <a href="/thinking/measuring-what-matters">
+          Why measuring outcomes - not outputs - changes execution
+        </a>
+        <a href="/case-studies/boehringer-ingelheim-netvision">
+          Continue to Global Intranet Transformation
+        </a>
+      </section>
+    </section>
+  </section>
+</MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 820px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .compact-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+
+  .info-card p:last-child,
+  .compact-card p {
+    margin-bottom: 0;
+  }
+
+  .info-card ul,
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .info-card li,
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .info-card li:last-child,
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .outcomes-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 820px;
+  }
+
+  .tag-list span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--divider);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    background: #fff;
+  }
+
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-grid.three-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .snapshot-grid,
+    .cards-grid.three-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+  }
+</style>
