@@ -1,0 +1,607 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Client / Program", value: "Merrill Lynch / Bank of America" },
+  { label: "Role", value: "Sr. UX/UI Consultant" },
+  { label: "Product", value: "Internal Product Tools / Design System" },
+  { label: "Industry", value: "Financial Services / Enterprise" },
+  { label: "Scale", value: "6-person cross-functional team" },
+];
+
+const methodology = [
+  "Frame - Align and define",
+  "Discover - Research and empathize",
+  "Structure - Information architecture",
+  "Ideate - Explore concepts",
+  "Interact - Optimize flows",
+  "Design - Visual and systems",
+  "Validate - Test and reduce risk",
+  "Launch - Build and QA",
+  "Improve - Measure and learn",
+];
+
+const deliverables = [
+  "Cross-platform enterprise design system",
+  "Comprehensive pattern library",
+  "Production-ready component codebase",
+  "Design and development documentation",
+  "FactSet data integration workflow considerations",
+  "Governance standards and guidelines",
+];
+
+const methods = [
+  "Sketch",
+  "Figma",
+  "Pattern libraries",
+  "Component documentation",
+  "Design system governance",
+  "Usability testing",
+  "Enterprise workflow analysis",
+];
+
+const outcomes = [
+  "Reduced design and development duplication through shared patterns",
+  "Increased consistency across advisor-facing tools",
+  "Supported lower long-term maintenance overhead through reusable components",
+  "Improved financial advisor workflow consistency",
+  "Supported faster delivery of new features through shared design and development foundations",
+  "Enhanced scalability for future internal products",
+];
+
+const workedWell = [
+  "Establishing a comprehensive pattern library created a stronger foundation for consistency.",
+  "Collaboration between design and development helped translate design patterns into reusable product foundations.",
+  "A shared design system improved alignment across teams working on advisor-facing tools.",
+];
+
+const improvements = [
+  "Faster feedback loops during testing would have helped refine components more efficiently.",
+  "Greater upfront stakeholder buy-in could have accelerated adoption of the design system.",
+];
+
+const takeaways = [
+  "User feedback is essential when shaping design systems for complex enterprise tools.",
+  "Design systems need governance, not just components.",
+  "Cross-disciplinary collaboration is critical when turning design standards into usable product infrastructure.",
+];
+---
+
+<MainLayout
+  title="Enterprise Design System | Jorge Obando"
+  description="Merrill Lynch and Bank of America case study by Jorge Obando, covering enterprise design systems, advisor-facing tools, pattern libraries, governance, and design-engineering collaboration."
+  ogImage="/images/merrill-lynch-enterprise-design-system-case-study.png"
+>
+  <section class="case-study-page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Merrill Lynch / Bank of America</p>
+        <h1>Enterprise Design System</h1>
+        <p class="lead">
+          An enterprise design system for internal financial advisor tools, created to
+          reduce fragmented experiences, improve consistency, and support more
+          scalable product delivery across advisor-facing platforms.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/images/merrill-lynch-enterprise-design-system-case-study.png"
+          alt="Merrill Lynch enterprise advisor platform interface screenshot"
+        />
+      </figure>
+    </section>
+
+    <section class="snapshot-grid" aria-label="Case study snapshot">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        Merrill Lynch faced a challenge with internal financial advisor tools that had
+        been developed across different verticals and product teams. This created
+        inconsistent design patterns, redundant components, fragmented experiences,
+        and duplicated design and development effort.
+      </p>
+      <p>
+        As Sr. UX/UI Consultant, Jorge supported the development of an enterprise
+        design system intended to create a more cohesive framework for advisor-facing
+        tools.
+      </p>
+      <p>
+        Merrill Lynch, a division of Bank of America, needed to improve the
+        consistency and scalability of internal enterprise tools used by financial
+        advisors. The objective was to create a cohesive enterprise design system that
+        could reduce fragmented user experiences, support reusable components, improve
+        collaboration between design and engineering, and establish governance for
+        future product work.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>The real problem</h2>
+      <p>
+        Merrill Lynch, a division of Bank of America, had a set of internal enterprise
+        financial advisor tools that had evolved in silos across different verticals.
+      </p>
+      <p>
+        The result was inconsistent design patterns, redundant components, fragmented
+        user experiences, and duplicated effort across teams.
+      </p>
+      <p>
+        For financial advisors, the lack of a standardized framework created friction
+        when moving across tools and workflows. For the organization, it created
+        maintenance overhead and made it harder to scale product improvements
+        consistently.
+      </p>
+      <p>
+        The core challenge was not simply visual consistency. It was creating a
+        shared design and delivery foundation that could support advisor productivity,
+        product scalability, and long-term governance.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Role and leadership</h2>
+      <p>
+        As Sr. UX/UI Consultant, Jorge helped shape the design system strategy and
+        worked with cross-functional stakeholders across design, product, and
+        engineering.
+      </p>
+      <p>
+        His responsibilities included contributing to design principles, component
+        patterns, documentation standards, governance guidance, and alignment between
+        design and development teams.
+      </p>
+      <p>
+        The role required translating fragmented advisor tool experiences into
+        reusable patterns and helping establish a shared framework that could support
+        future product delivery.
+      </p>
+      <p>
+        The work involved a 6-person cross-functional team. Collaboration was
+        colocated, supporting close coordination between design, product, and
+        engineering stakeholders throughout design, prototyping, testing,
+        documentation, and implementation.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Methodology</h2>
+      <p>
+        The work followed a research-led, structure-first design process with
+        continuous validation. The approach emphasized research over opinion,
+        structure before surface, and continuous usability validation.
+      </p>
+      <div class="cards-grid three-up">
+        {methodology.map((item) => (
+          <article class="info-card compact-card">
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Key deliverables</h2>
+      <div class="outcomes-card">
+        <ul>
+          {deliverables.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Design process</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>Research and discovery</h3>
+          <p>
+            The research approach included user interviews, usability testing with
+            financial advisors, and a detailed audit of existing tools.
+          </p>
+          <p>
+            The team cataloged design inconsistencies, redundant components, and
+            workflow fragmentation across internal advisor platforms.
+          </p>
+          <p>
+            Key insights showed that advisors had to navigate disparate systems and
+            inconsistent interaction patterns, creating unnecessary friction in their
+            daily work.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Information architecture</h3>
+          <p>
+            The information architecture strategy focused on creating a clear
+            organizational structure for the design system.
+          </p>
+          <p>
+            The team established taxonomy for components, patterns, and documentation
+            so that designers and developers could find, understand, and reuse assets
+            more easily.
+          </p>
+          <p>
+            A centralized pattern library served as a shared source of truth, helping
+            reduce confusion across teams and improve consistency across product
+            verticals.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Prototyping and testing</h3>
+          <p>
+            The team used iterative prototyping methods to explore key components and
+            advisor workflows.
+          </p>
+          <p>
+            High-fidelity prototypes were created for critical patterns and reviewed
+            with stakeholders and users.
+          </p>
+          <p>
+            Testing helped validate design assumptions, identify usability issues, and
+            refine components before broader implementation.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Iterations and refinements</h3>
+          <p>
+            The project went through multiple iterations based on user feedback and
+            stakeholder review.
+          </p>
+          <p>
+            Initial patterns and workflow designs were refined to improve clarity,
+            usability, and guidance.
+          </p>
+          <p>
+            Feedback from advisors highlighted areas where contextual help, clearer
+            interaction states, and better pattern documentation could improve the
+            overall experience.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Technologies and methods</h2>
+      <div class="tag-list" aria-label="Technologies and methods">
+        {methods.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <p>
+        The design system work supported Merrill Lynch's goals around reducing design
+        and development duplication, improving operational consistency, and creating a
+        more scalable foundation for advisor-facing tools.
+      </p>
+      <p>
+        By establishing shared patterns, documentation, and governance, the initiative
+        helped reduce fragmentation across tools and supported more consistent product
+        delivery across verticals.
+      </p>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>What worked well</h3>
+          <ul>
+            {workedWell.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Areas for improvement</h3>
+          <ul>
+            {improvements.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Key takeaways</h3>
+          <ul>
+            {takeaways.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Why this matters</h2>
+      <p>
+        Enterprise design systems are not only about visual consistency. They create
+        shared foundations for governance, reuse, collaboration, and scalable delivery
+        across complex product organizations.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/governed-product-system">
+          Designing governed product systems for scale and alignment
+        </a>
+        <a href="/thinking/measuring-what-matters">
+          Why measuring outcomes - not outputs - changes execution
+        </a>
+        <a href="/case-studies">
+          Return to all case studies
+        </a>
+      </section>
+    </section>
+  </section>
+</MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 820px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .compact-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+
+  .info-card p:last-child,
+  .compact-card p {
+    margin-bottom: 0;
+  }
+
+  .info-card ul,
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .info-card li,
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .info-card li:last-child,
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .outcomes-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 820px;
+  }
+
+  .tag-list span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--divider);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    background: #fff;
+  }
+
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-grid.three-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .snapshot-grid,
+    .cards-grid.three-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+  }
+</style>
