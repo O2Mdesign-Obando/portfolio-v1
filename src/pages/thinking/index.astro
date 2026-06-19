@@ -3,22 +3,34 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
 const articles = [
   {
-    title: "Designing Through Change",
-    href: "/thinking/designing-through-change",
+    title: "The Problem With Systems That Forget",
+    date: "June 11, 2026",
+    category: "Continuity & Context",
+    summary:
+      "Why the next layer of productivity depends on preserving context, not just generating output.",
     description:
-      "The evolution of digital design—from pages to platforms to intelligent systems—and how it changes how we build products.",
+      "Modern systems are increasingly good at preserving information, but much weaker at preserving the context, reasoning, decisions, and continuity that allow meaningful work to continue.",
+    href: "https://www.o2mdesign.com/thinking/the-problem-with-systems-that-forget",
   },
   {
-    title: "Measuring What Matters",
-    href: "/thinking/measuring-what-matters",
+    title: "Why Knowledge Work Feels Increasingly Fragmented",
+    date: "May 28, 2026",
+    category: "Continuity & Context",
+    summary:
+      "The problem is not that we lack information. It is that modern work no longer preserves the thread between tools, decisions, and context.",
     description:
-      "Why design must connect directly to business KPIs—and how to turn design decisions into measurable impact.",
+      "Modern work increasingly happens across disconnected tools, conversations, automations, and AI systems. The challenge is no longer producing information; it is preserving continuity across it.",
+    href: "https://www.o2mdesign.com/thinking/why-knowledge-work-feels-increasingly-fragmented",
   },
   {
-    title: "Governed Product System",
-    href: "/thinking/governed-product-system",
+    title: "Continuity Infrastructure",
+    date: "May 19, 2026",
+    category: "Systems Thinking",
+    summary:
+      "Why some digital systems need to preserve context before they try to accelerate output.",
     description:
-      "Why real product systems require governance, observability, and discipline—and how to design for evolution without drift.",
+      "A short observation on the difference between engagement infrastructure and continuity infrastructure, and why that distinction matters for complex digital work.",
+    href: "https://www.o2mdesign.com/thinking/continuity-infrastructure",
   },
 ];
 ---
@@ -42,15 +54,23 @@ const articles = [
       </p>
     </section>
 
-    <section class="articles" aria-label="Thinking articles">
+    <section class="articles-section" aria-labelledby="latest-writing-title">
+      <p class="section-label">Latest writing from O2M Design</p>
+      <h2 id="latest-writing-title">Proof of reasoning</h2>
+
+      <div class="articles" aria-label="O2M thinking articles">
       {articles.map((article) => (
         <article class="article-card">
-          <a href={article.href}>
+          <a href={article.href} target="_blank" rel="noopener noreferrer">
+            <p class="article-meta">{article.date} · {article.category}</p>
             <h2>{article.title}</h2>
+            <p class="article-summary">{article.summary}</p>
             <p>{article.description}</p>
+            <span class="article-link">Read on O2M Design →</span>
           </a>
         </article>
       ))}
+      </div>
     </section>
     
     <p class="archive-link">
@@ -114,6 +134,28 @@ const articles = [
     gap: 1.25rem;
   }
 
+  .articles-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .section-label {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .articles-section > h2 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
   .article-card {
     border: 1px solid var(--divider);
     border-radius: 16px;
@@ -145,6 +187,29 @@ const articles = [
     color: #555;
     line-height: 1.7;
     max-width: 720px;
+  }
+
+  .article-meta {
+    margin-bottom: 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .article-card .article-summary {
+    margin-bottom: 0.7rem;
+    color: #222;
+    font-weight: 600;
+  }
+
+  .article-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #a33a3a;
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {

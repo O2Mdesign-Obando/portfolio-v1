@@ -1,0 +1,606 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Client / Program", value: "T. Rowe Price" },
+  { label: "Role", value: "Sr. UX/UI Consultant" },
+  { label: "Product", value: "Web / Mobile" },
+  { label: "Industry", value: "Financial Services / Fintech" },
+  { label: "Scale", value: "5-person cross-functional team" },
+];
+
+const methodology = [
+  "Frame - Align and define",
+  "Discover - Research and empathize",
+  "Structure - Information architecture",
+  "Ideate - Explore concepts",
+  "Interact - Optimize flows",
+  "Design - Visual and systems",
+  "Validate - Test and reduce risk",
+  "Launch - Build and QA",
+  "Improve - Measure and learn",
+];
+
+const deliverables = [
+  "Bite-sized insight cards with cross-indexing",
+  "Intuitive data drill-down models",
+  "Mobile-first investment dashboards",
+  "Complex data visualization patterns",
+  "Responsive platform design",
+  "Portfolio exposure visualization",
+  "Interactive financial charts and graphs",
+  "Decision-support tools",
+];
+
+const methods = [
+  "Axure RP",
+  "Sketch",
+  "InVision",
+  "Wireframing",
+  "Interactive prototyping",
+  "Usability testing",
+  "Data visualization",
+  "Responsive web and mobile design",
+];
+
+const outcomes = [
+  "Supported more informed investment decision-making",
+  "Made complex financial data easier to scan and interpret",
+  "Improved clarity around portfolio exposure and risk information",
+  "Reduced friction in moving from high-level insights to detailed analytics",
+  "Strengthened cross-device access through responsive design",
+  "Supported a more guided investor analysis experience",
+];
+
+const workedWell = [
+  "Bite-sized insight cards communicated critical data points quickly and clearly.",
+  "A mobile-first approach supported a seamless experience across devices.",
+  "Interactive charts and graphs improved engagement with complex financial data.",
+];
+
+const improvements = [
+  "Future versions could explore more advanced personalization for investor insights.",
+  "Additional performance optimization would further improve responsiveness for data-heavy views.",
+];
+
+const takeaways = [
+  "Combining qualitative insight with quantitative data creates a more complete understanding of investor needs.",
+  "Continuous user feedback is essential when designing complex financial platforms.",
+  "Strong financial UX requires balancing simplicity with analytical depth.",
+];
+---
+
+<MainLayout
+  title="High-End Investor Platform | Jorge Obando"
+  description="T. Rowe Price case study by Jorge Obando, covering investor platform design, data visualization, mobile and responsive UX, drill-down models, insight cards, and decision-support tools."
+  ogImage="/images/t-rowe-price-investor-platform-case-study.png"
+>
+  <section class="case-study-page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">T. Rowe Price</p>
+        <h1>High-End Investor Platform</h1>
+        <p class="lead">
+          A web and mobile investor platform designed to make complex financial data
+          easier to understand through clearer dashboards, insight cards, drill-down
+          models, visualizations, and decision-support tools.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/images/t-rowe-price-investor-platform-case-study.png"
+          alt="T. Rowe Price high-end investor platform interface screenshot"
+        />
+      </figure>
+    </section>
+
+    <section class="snapshot-grid" aria-label="Case study snapshot">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        T. Rowe Price faced a challenge common in high-end investment experiences:
+        users needed access to deep financial information, but dense data and complex
+        interfaces could make it difficult to identify the right insights quickly.
+      </p>
+      <p>
+        As Sr. UX/UI Consultant, Jorge supported the design of a web and mobile
+        investor platform focused on clearer data visualization, more intuitive
+        drill-down patterns, bite-sized insight cards, and decision-support tools.
+      </p>
+      <p>
+        T. Rowe Price needed to help high-end investors navigate and interpret large
+        volumes of complex financial data. The objective was to create a clearer,
+        more usable web and mobile platform that could surface meaningful insights,
+        support decision-making, and balance simplified data presentation with the
+        analytical depth sophisticated investors require.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>The real problem</h2>
+      <p>
+        High-end investors often need to navigate large volumes of complex financial
+        data to make informed investment decisions.
+      </p>
+      <p>
+        The strategic challenge was creating clarity and usability within dense,
+        technical information while preserving the depth necessary for analysis.
+      </p>
+      <p>
+        The experience needed to help users move from high-level portfolio insights
+        to detailed analytics without feeling overwhelmed.
+      </p>
+      <p>
+        The core design problem was balancing simplicity and depth: reducing cognitive
+        load while still supporting sophisticated financial decision-making.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Role and leadership</h2>
+      <p>
+        As Sr. UX/UI Consultant, Jorge worked with a cross-functional team that
+        included data analysts, designers, and software engineers.
+      </p>
+      <p>
+        His responsibilities included UX strategy, interaction design, visual design,
+        stakeholder collaboration, ideation facilitation, and translating user needs
+        into actionable design requirements.
+      </p>
+      <p>
+        The role required aligning investment user needs with business goals while
+        helping shape interaction models for data-rich financial experiences.
+      </p>
+      <p>
+        The work involved a 5-person cross-functional team. Collaboration was
+        primarily on-site, supporting close coordination between data analysts,
+        designers, engineers, and stakeholders throughout research, prototyping,
+        testing, and refinement.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Methodology</h2>
+      <p>
+        The work followed a research-led, structure-first design process with
+        continuous validation. The approach emphasized research over opinion,
+        structure before surface, and continuous usability validation.
+      </p>
+      <div class="cards-grid three-up">
+        {methodology.map((item) => (
+          <article class="info-card compact-card">
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Key deliverables</h2>
+      <div class="outcomes-card">
+        <ul>
+          {deliverables.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Design process</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>Research and discovery</h3>
+          <p>
+            The research approach combined qualitative and quantitative methods.
+          </p>
+          <p>
+            The team conducted in-depth interviews with high-end investors to
+            understand pain points, behavior patterns, and expectations around
+            financial data access.
+          </p>
+          <p>
+            Surveys and broader insight gathering helped identify the need for concise
+            data summaries, robust filtering, and drill-down capabilities.
+          </p>
+          <p>
+            Users expressed a preference for visual representations that could help
+            them move quickly from summary-level information to deeper analysis.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Information architecture</h3>
+          <p>
+            The information architecture strategy focused on creating a user-centered
+            framework that prioritized accessibility, intuitive navigation, and
+            progressive disclosure.
+          </p>
+          <p>
+            The team structured content around investor needs, defined clearer paths
+            for data exploration, and created hierarchical models that allowed users
+            to drill down from high-level insights to detailed analytics.
+          </p>
+          <p>
+            This structure gave users more control over the complexity of information
+            while preserving analytical depth.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Prototyping and testing</h3>
+          <p>
+            The team used an iterative prototyping process, starting with low-fidelity
+            wireframes and progressing to high-fidelity interactive prototypes.
+          </p>
+          <p>
+            Usability testing sessions with representative users helped evaluate
+            functionality, clarity, and ease of use.
+          </p>
+          <p>
+            Feedback from testing informed refinements before implementation,
+            grounding the design in observed user behavior.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Iterations and refinements</h3>
+          <p>
+            The design process went through multiple iterations based on user testing
+            feedback.
+          </p>
+          <p>
+            Users highlighted the need for more interactive elements, clearer visual
+            representations, and stronger decision-support tools.
+          </p>
+          <p>
+            These insights led to refinements in data visualization, dashboard
+            hierarchy, insight-card behavior, and drill-down interactions.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Technologies and methods</h2>
+      <div class="tag-list" aria-label="Technologies and methods">
+        {methods.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <p>
+        The design work supported T. Rowe Price's goals around improving investor
+        clarity, strengthening cross-device access, and making complex financial data
+        easier to interpret.
+      </p>
+      <p>
+        By focusing on digestible visualizations, insight cards, drill-down models,
+        and decision-support patterns, the platform helped investors move through
+        complex information with greater confidence and control.
+      </p>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>What worked well</h3>
+          <ul>
+            {workedWell.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Areas for improvement</h3>
+          <ul>
+            {improvements.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Key takeaways</h3>
+          <ul>
+            {takeaways.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Why this matters</h2>
+      <p>
+        Investor platforms must help users move from dense financial information to
+        clear, trustworthy insight without stripping away analytical depth. Strong
+        financial UX gives users a path from summary to detail while keeping complex
+        data understandable and actionable.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/measuring-what-matters">
+          Why measuring outcomes - not outputs - changes execution
+        </a>
+        <a href="/thinking/designing-through-change">
+          Designing systems that evolve through change
+        </a>
+        <a href="/case-studies">
+          Return to all case studies
+        </a>
+      </section>
+    </section>
+  </section>
+</MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 820px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .compact-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+
+  .info-card p:last-child,
+  .compact-card p {
+    margin-bottom: 0;
+  }
+
+  .info-card ul,
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .info-card li,
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .info-card li:last-child,
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .outcomes-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 820px;
+  }
+
+  .tag-list span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--divider);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    background: #fff;
+  }
+
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-grid.three-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .snapshot-grid,
+    .cards-grid.three-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+  }
+</style>
