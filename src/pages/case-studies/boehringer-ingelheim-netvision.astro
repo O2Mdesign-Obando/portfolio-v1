@@ -1,0 +1,640 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const snapshot = [
+  { label: "Client / Program", value: "Boehringer Ingelheim / NetVision" },
+  { label: "Role", value: "Global UCD Director" },
+  { label: "Product", value: "Enterprise Intranet Platform" },
+  { label: "Industry", value: "Enterprise / Healthcare / Life Sciences" },
+  { label: "Scale", value: "~100 cross-disciplinary staff globally" },
+];
+
+const methodology = [
+  "Frame - Align and define",
+  "Discover - Research and empathize",
+  "Structure - Information architecture",
+  "Ideate - Explore concepts",
+  "Interact - Optimize flows",
+  "Design - Visual and systems",
+  "Validate - Test and reduce risk",
+  "Launch - Build and QA",
+  "Improve - Measure and learn",
+];
+
+const deliverables = [
+  "Role-aware homepage design surfacing news, tools, alerts, and KPIs",
+  "Modular content blocks enabling consistent layouts across departments",
+  "Standardized page templates for news, announcements, and department pages",
+  "My Job and role-specific dashboard concepts",
+  "Training and education resource frameworks",
+  "Library and information services templates",
+  "Global governance model separating global standards from local customization",
+  "Comprehensive IA and navigation framework",
+  "Low-fidelity wireframe library for stakeholder alignment",
+];
+
+const methods = [
+  "Enterprise portal platform",
+  "Information architecture",
+  "Wireframing",
+  "Taxonomy and metadata systems",
+  "Content management systems",
+  "Global collaboration platforms",
+];
+
+const challenges = [
+  "Balancing global consistency with strong local and regional autonomy requirements",
+  "Navigating complex stakeholder landscapes across business units and geographies",
+  "Managing follow-the-sun coordination across approximately 100 distributed team members",
+  "Addressing varied regulatory and compliance requirements across regions",
+  "Socializing user-centered design practices in a traditionally IT-driven enterprise culture",
+];
+
+const outcomes = [
+  "Unified intranet ecosystem serving tens of thousands of employees globally",
+  "Improved findability and consistency of internal communications across regions",
+  "Reduced content and design duplication through modular component systems",
+  "Enabled faster publishing and clearer content ownership through governance frameworks",
+  "Created scalable IA foundation supporting a multi-year roadmap and future enhancements",
+  "Socialized UCD practices in a traditionally IT-driven enterprise culture",
+  "Established a follow-the-sun production model enabling continuous global delivery",
+];
+
+const workedWell = [
+  "Low-fidelity wireframes enabled rapid stakeholder alignment across time zones.",
+  "The follow-the-sun production model increased velocity while distributing work globally.",
+  "Role-based persona mapping created a foundation for meaningful personalization.",
+  "Modular component strategy balanced consistency with departmental flexibility.",
+  "Early governance frameworks helped prevent scope creep and political gridlock.",
+];
+
+const improvements = [
+  "Earlier investment in measurement frameworks would have enabled stronger quantitative impact validation.",
+  "More formal change management support could have accelerated organizational adoption of UCD practices.",
+  "Additional user testing with actual employees, beyond stakeholder validation, would have surfaced usability issues earlier.",
+];
+
+const takeaways = [
+  "Success in enterprise UX depends less on individual screens and more on governance, information structure, and shared understanding across global organizations.",
+  "Systems thinking is critical when designing for scale and complexity; frameworks matter more than features.",
+  "Follow-the-sun models require explicit handoff protocols and documentation standards to maintain design coherence.",
+  "Early stakeholder alignment through low-fidelity wireframes reduces downstream friction and accelerates consensus.",
+  "Global/local balance requires explicit governance frameworks: autonomy within structure.",
+];
+---
+
+<MainLayout
+  title="Global Intranet Transformation | Jorge Obando"
+  description="Boehringer Ingelheim NetVision case study by Jorge Obando, covering global intranet transformation, enterprise information architecture, governance, and user-centered design leadership."
+  ogImage="/images/bi-netvision-intranet-case-study.png"
+>
+  <section class="case-study-page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Boehringer Ingelheim / NetVision</p>
+        <h1>Global Intranet Transformation</h1>
+        <p class="lead">
+          A global intranet transformation focused on improving access to knowledge,
+          communication, and shared digital experience across a complex pharmaceutical
+          enterprise.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/images/bi-netvision-intranet-case-study.png"
+          alt="Boehringer Ingelheim NetVision intranet interface screenshot"
+        />
+      </figure>
+    </section>
+
+    <section class="snapshot-grid" aria-label="Case study snapshot">
+      {snapshot.map((item) => (
+        <article class="snapshot-card">
+          <p class="snapshot-label">{item.label}</p>
+          <p class="snapshot-value">{item.value}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        A multi-year global intranet transformation project for Boehringer Ingelheim
+        Pharmaceuticals serving tens of thousands of employees across Americas, EMEA,
+        and APAC regions.
+      </p>
+      <p>
+        As Global UCD Lead, Jorge directed user-centered design strategy for a
+        follow-the-sun production model team of approximately 100 cross-disciplinary
+        staff, helping transform a fragmented HTML-based intranet ecosystem into a
+        unified, role-aware platform.
+      </p>
+      <p>
+        The initiative established scalable information architecture frameworks,
+        governance models balancing global consistency with regional flexibility, and
+        design systems that reduced publishing friction while improving collaboration,
+        communication effectiveness, and content findability across the global
+        pharmaceutical organization.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>The real problem</h2>
+      <p>
+        Boehringer Ingelheim's legacy intranet ecosystem had evolved organically over
+        many years, resulting in fragmented HTML sites owned by individual departments,
+        inconsistent navigation and terminology, limited personalization, high
+        publishing friction, and minimal support for collaboration.
+      </p>
+      <p>
+        From a business perspective, the intranet was mission-critical but no longer
+        aligned with how a global pharmaceutical organization operated, particularly in
+        areas such as compliance, internal communications, research, and cross-regional
+        collaboration.
+      </p>
+      <p>
+        The core challenge was designing a scalable, user-centered intranet framework
+        supporting global and local content needs, multiple business units and job
+        roles, secure compliant information sharing, and long-term growth and
+        governance.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Design vision</h2>
+      <p>
+        Transform the intranet from a static information repository into a living
+        internal platform supporting daily work, communication, and engagement.
+      </p>
+      <p>
+        Create a role-aware, modular experience that surfaces relevant news, tools,
+        alerts, and KPIs while enabling consistent layouts across departments and clear
+        governance separating global standards from local customization.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Role and leadership</h2>
+      <p>
+        As Global UCD Lead for the NetVision program, Jorge directed user-centered
+        design strategy across a colocated team of approximately 100
+        cross-disciplinary staff worldwide operating in a follow-the-sun production
+        model.
+      </p>
+      <p>
+        He served as strategic partner to Public Affairs and Communications leadership,
+        orchestrating handoffs between work zones to support continuous production.
+      </p>
+      <p>
+        His responsibilities included business analysis, information architecture,
+        solution definition, stakeholder alignment, and liaison work between global
+        business stakeholders, regional teams, and IT delivery.
+      </p>
+      <p>
+        Collaboration included Public Affairs, Communications, HR, R&amp;D, Finance,
+        and IT stakeholders across Americas, EMEA, and APAC regions.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Methodology</h2>
+      <p>
+        The work followed a research-led, structure-first design process with
+        continuous validation. The approach emphasized research over opinion,
+        structure before surface, and continuous usability validation.
+      </p>
+      <div class="cards-grid three-up">
+        {methodology.map((item) => (
+          <article class="info-card compact-card">
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Key deliverables</h2>
+      <div class="outcomes-card">
+        <ul>
+          {deliverables.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Design process</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>Research and discovery</h3>
+          <p>
+            Conducted comprehensive stakeholder and business analysis in partnership
+            with Public Affairs, Communications, HR, R&amp;D, Finance, and IT to
+            clarify global versus local ownership models and define success metrics
+            tied to communication effectiveness and usability.
+          </p>
+          <p>
+            Identified core employee personas, including corporate, research, field,
+            manufacturing, and leadership audiences, and mapped role-based needs for
+            news, tools, applications, and collaboration to inform personalization and
+            homepage logic.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Information architecture</h3>
+          <p>
+            Designed a global navigation framework balancing consistency and
+            flexibility. Established content taxonomies, metadata, and tagging models
+            to support findability and governance.
+          </p>
+          <p>
+            Defined page templates and modular components for reuse across
+            departments, and created role-aware information architecture enabling
+            personalized experiences while maintaining organizational coherence.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Prototyping and testing</h3>
+          <p>
+            Produced detailed low-fidelity wireframes to align stakeholders early and
+            establish shared vision across regions. Validated layout, hierarchy, and
+            interaction patterns through iterative stakeholder reviews and usability
+            feedback sessions.
+          </p>
+          <p>
+            Wireframes served as critical artifacts for governance discussions and
+            phased rollout planning.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Iterations and refinements</h3>
+          <p>
+            Key iterations focused on balancing global standardization with local
+            flexibility requirements. Early feedback from regional stakeholders shaped
+            personalization logic and content governance models.
+          </p>
+          <p>
+            Testing revealed the need for stronger emergency alert visibility and
+            clearer pathways to compliance information, leading to architectural
+            adjustments that prioritized critical communications while preserving
+            departmental autonomy.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Technologies and methods</h2>
+      <div class="tag-list" aria-label="Technologies and methods">
+        {methods.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Challenges</h2>
+      <div class="outcomes-card">
+        <ul>
+          {challenges.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Outcomes</h2>
+      <p>
+        The initiative established a global intranet foundation enabling faster
+        publishing, clearer content ownership, and reduced duplication of design
+        effort.
+      </p>
+      <p>
+        The program created scalable information architecture and design systems
+        supporting future enhancements while improving findability and consistency of
+        internal communications.
+      </p>
+      <p>
+        It also helped socialize user-centered design practices within a traditionally
+        IT-driven enterprise environment, demonstrating the value of information
+        architecture, UX, and early stakeholder alignment at scale.
+      </p>
+      <div class="outcomes-card">
+        <ul>
+          {outcomes.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Reflection</h2>
+      <div class="cards-grid one-up">
+        <article class="info-card">
+          <h3>What worked well</h3>
+          <ul>
+            {workedWell.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Areas for improvement</h3>
+          <ul>
+            {improvements.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Key takeaways</h3>
+          <ul>
+            {takeaways.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Why this matters</h2>
+      <p>
+        Enterprise UX at this scale is about governance, information architecture,
+        alignment, and sustainable systems - not only screens. The value comes from
+        making complexity legible enough for global teams to act consistently while
+        preserving the flexibility local organizations need.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Thinking</h2>
+      <section class="article-links" aria-label="Related thinking and next navigation">
+        <a href="/thinking/governed-product-system">
+          Designing governed product systems for scale and alignment
+        </a>
+        <a href="/thinking/designing-through-change">
+          Designing systems that evolve through change
+        </a>
+        <a href="/case-studies">
+          Return to all case studies
+        </a>
+      </section>
+    </section>
+  </section>
+</MainLayout>
+
+<style>
+  .case-study-page {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 3rem;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a33a3a;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.15rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin-top: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 720px;
+  }
+
+  .hero-image {
+    margin: 0;
+    border: 1px solid var(--divider);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .snapshot-card,
+  .info-card,
+  .outcomes-card {
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .snapshot-card {
+    padding: 1.2rem;
+  }
+
+  .snapshot-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .snapshot-value {
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .content-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+  }
+
+  .content-section h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .content-section p {
+    margin: 0 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 820px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cards-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-grid.one-up {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+  }
+
+  .compact-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .info-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .info-card p {
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+
+  .info-card p:last-child,
+  .compact-card p {
+    margin-bottom: 0;
+  }
+
+  .info-card ul,
+  .outcomes-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .info-card li,
+  .outcomes-card li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .info-card li:last-child,
+  .outcomes-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .outcomes-card {
+    padding: 1.35rem 1.4rem;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 820px;
+  }
+
+  .tag-list span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--divider);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    background: #fff;
+  }
+
+  .article-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+    max-width: 760px;
+  }
+
+  .article-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-grid.three-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-page {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .snapshot-grid,
+    .cards-grid.three-up {
+      grid-template-columns: 1fr;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-image img {
+      min-height: 220px;
+    }
+
+    .article-links {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+  }
+</style>
